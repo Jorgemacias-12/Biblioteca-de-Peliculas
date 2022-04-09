@@ -18,6 +18,7 @@ namespace Biblioteca_de_Peliculas
         //╚═══════════╝
         string Usuario = "";
         string Contraseña = "";
+        DlgMenu dlgmenu = new DlgMenu();
 
         public DlgLogin()
         {
@@ -188,14 +189,8 @@ namespace Biblioteca_de_Peliculas
                 case "aaron":
                     if (Contraseña == "110803")
                     {
-                        DlgMenu menu = new DlgMenu();
-                        menu.Show();
-                        TxtUsuario.Text = "USUARIO";
-                        TxtUsuario.ForeColor = Color.DimGray;
-                        TxtContraseña.Text = "CONTRASEÑA";
-                        TxtContraseña.ForeColor = Color.DimGray;
-                        TxtContraseña.UseSystemPasswordChar = false;
-                        WindowState = FormWindowState.Minimized;
+                        dlgmenu.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -204,7 +199,7 @@ namespace Biblioteca_de_Peliculas
                     break;
 
                 default:
-                    MessageBox.Show("Datos requeridos no introducidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuario y/o Contraseña incorrecta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
             }
         }

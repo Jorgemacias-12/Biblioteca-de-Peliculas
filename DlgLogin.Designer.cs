@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgLogin));
             this.PnlIzquierdo = new System.Windows.Forms.Panel();
-            this.PtbIzquierdo = new System.Windows.Forms.PictureBox();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.LblUsuario = new System.Windows.Forms.Label();
             this.TxtContraseña = new System.Windows.Forms.TextBox();
@@ -38,13 +37,14 @@
             this.LblTitulo = new System.Windows.Forms.Label();
             this.BtnEntrar = new System.Windows.Forms.Button();
             this.LnblContraseña = new System.Windows.Forms.LinkLabel();
+            this.CkbMostrarContraseña = new System.Windows.Forms.CheckBox();
             this.PtbMinimizar = new System.Windows.Forms.PictureBox();
             this.PtbCerrar = new System.Windows.Forms.PictureBox();
-            this.CkbMostrarContraseña = new System.Windows.Forms.CheckBox();
+            this.PtbIzquierdo = new System.Windows.Forms.PictureBox();
             this.PnlIzquierdo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbIzquierdo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbIzquierdo)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlIzquierdo
@@ -56,17 +56,6 @@
             this.PnlIzquierdo.Name = "PnlIzquierdo";
             this.PnlIzquierdo.Size = new System.Drawing.Size(250, 330);
             this.PnlIzquierdo.TabIndex = 0;
-            // 
-            // PtbIzquierdo
-            // 
-            this.PtbIzquierdo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PtbIzquierdo.Image = global::Biblioteca_de_Peliculas.Properties.Resources.Montaña_Nevada;
-            this.PtbIzquierdo.Location = new System.Drawing.Point(0, 0);
-            this.PtbIzquierdo.Name = "PtbIzquierdo";
-            this.PtbIzquierdo.Size = new System.Drawing.Size(250, 330);
-            this.PtbIzquierdo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PtbIzquierdo.TabIndex = 11;
-            this.PtbIzquierdo.TabStop = false;
             // 
             // TxtUsuario
             // 
@@ -161,28 +150,6 @@
             this.LnblContraseña.Text = "¿Ha olvidado su contraseña?";
             this.LnblContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PtbMinimizar
-            // 
-            this.PtbMinimizar.Image = global::Biblioteca_de_Peliculas.Properties.Resources.minimizar_signo;
-            this.PtbMinimizar.Location = new System.Drawing.Point(732, 0);
-            this.PtbMinimizar.Name = "PtbMinimizar";
-            this.PtbMinimizar.Size = new System.Drawing.Size(20, 20);
-            this.PtbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PtbMinimizar.TabIndex = 10;
-            this.PtbMinimizar.TabStop = false;
-            this.PtbMinimizar.Click += new System.EventHandler(this.PtbMinimizar_Click);
-            // 
-            // PtbCerrar
-            // 
-            this.PtbCerrar.Image = global::Biblioteca_de_Peliculas.Properties.Resources.poder;
-            this.PtbCerrar.Location = new System.Drawing.Point(758, 0);
-            this.PtbCerrar.Name = "PtbCerrar";
-            this.PtbCerrar.Size = new System.Drawing.Size(20, 20);
-            this.PtbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PtbCerrar.TabIndex = 9;
-            this.PtbCerrar.TabStop = false;
-            this.PtbCerrar.Click += new System.EventHandler(this.PtbCerrar_Click);
-            // 
             // CkbMostrarContraseña
             // 
             this.CkbMostrarContraseña.AutoSize = true;
@@ -198,6 +165,38 @@
             this.CkbMostrarContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CkbMostrarContraseña.UseVisualStyleBackColor = true;
             this.CkbMostrarContraseña.CheckedChanged += new System.EventHandler(this.CkbMostrarContraseña_CheckedChanged);
+            // 
+            // PtbMinimizar
+            // 
+            this.PtbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("PtbMinimizar.Image")));
+            this.PtbMinimizar.Location = new System.Drawing.Point(732, 0);
+            this.PtbMinimizar.Name = "PtbMinimizar";
+            this.PtbMinimizar.Size = new System.Drawing.Size(20, 20);
+            this.PtbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PtbMinimizar.TabIndex = 10;
+            this.PtbMinimizar.TabStop = false;
+            this.PtbMinimizar.Click += new System.EventHandler(this.PtbMinimizar_Click);
+            // 
+            // PtbCerrar
+            // 
+            this.PtbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("PtbCerrar.Image")));
+            this.PtbCerrar.Location = new System.Drawing.Point(758, 0);
+            this.PtbCerrar.Name = "PtbCerrar";
+            this.PtbCerrar.Size = new System.Drawing.Size(20, 20);
+            this.PtbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PtbCerrar.TabIndex = 9;
+            this.PtbCerrar.TabStop = false;
+            this.PtbCerrar.Click += new System.EventHandler(this.PtbCerrar_Click);
+            // 
+            // PtbIzquierdo
+            // 
+            this.PtbIzquierdo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PtbIzquierdo.Image = ((System.Drawing.Image)(resources.GetObject("PtbIzquierdo.Image")));
+            this.PtbIzquierdo.Location = new System.Drawing.Point(0, 0);
+            this.PtbIzquierdo.Name = "PtbIzquierdo";
+            this.PtbIzquierdo.Size = new System.Drawing.Size(250, 330);
+            this.PtbIzquierdo.TabIndex = 11;
+            this.PtbIzquierdo.TabStop = false;
             // 
             // DlgLogin
             // 
@@ -226,9 +225,9 @@
             this.Load += new System.EventHandler(this.DlgLogin_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DlgLogin_MouseDown);
             this.PnlIzquierdo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PtbIzquierdo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbIzquierdo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
