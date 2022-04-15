@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MACTrackBarLib, Version=1.0.5896.38740, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MACTrackBarLib.dll.1.0.2\lib\net40\MACTrackBarLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +49,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DlgAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgAcercaDe.Designer.cs">
+      <DependentUpon>DlgAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgAnimadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgAnimadas.Designer.cs">
+      <DependentUpon>DlgAnimadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgCategoriaAccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgCategoriaAccion.Designer.cs">
+      <DependentUpon>DlgCategoriaAccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgComedias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgComedias.Designer.cs">
+      <DependentUpon>DlgComedias.cs</DependentUpon>
+    </Compile>
     <Compile Include="DlgLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DlgLogin.Designer.cs">
       <DependentUpon>DlgLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgManual.Designer.cs">
+      <DependentUpon>DlgManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgMensajeCerrarMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgMensajeCerrarMenu.Designer.cs">
+      <DependentUpon>DlgMensajeCerrarMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="DlgMenu.cs">
       <SubType>Form</SubType>
@@ -58,19 +97,65 @@
     <Compile Include="DlgMenu.Designer.cs">
       <DependentUpon>DlgMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DlgReproductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgReproductor.Designer.cs">
+      <DependentUpon>DlgReproductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgCategoriaInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgCategoriaInicio.Designer.cs">
+      <DependentUpon>DlgCategoriaInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgTerror.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgTerror.Designer.cs">
+      <DependentUpon>DlgTerror.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DlgAcercaDe.resx">
+      <DependentUpon>DlgAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgAnimadas.resx">
+      <DependentUpon>DlgAnimadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgCategoriaAccion.resx">
+      <DependentUpon>DlgCategoriaAccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgCategoriaInicio.resx">
+      <DependentUpon>DlgCategoriaInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgComedias.resx">
+      <DependentUpon>DlgComedias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgLogin.resx">
       <DependentUpon>DlgLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DlgManual.resx">
+      <DependentUpon>DlgManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgMensajeCerrarMenu.resx">
+      <DependentUpon>DlgMensajeCerrarMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgMenu.resx">
       <DependentUpon>DlgMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgReproductor.resx">
+      <DependentUpon>DlgReproductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgTerror.resx">
+      <DependentUpon>DlgTerror.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,6 +194,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\png\minimizar-signo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
