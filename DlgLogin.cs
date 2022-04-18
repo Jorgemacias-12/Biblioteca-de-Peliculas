@@ -238,7 +238,7 @@ namespace Biblioteca_de_Peliculas
             showingPassword = !showingPassword;
 
             // Utilizando expresión ternaria en vez de    if      caso true                    caso falso
-            BtnShowPassword.Image = showingPassword ? blindImg : eyeImg;
+            BtnShowPassword.Image = showingPassword ? eyeImg : blindImg;
 
             // Mostrar o ocultar los caracteres de contraseña dependiendo de showingPassword
             TxtContraseñaLogin.UseSystemPasswordChar = showingPassword;

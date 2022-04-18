@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgLogin));
             this.PnlIzquierdoLogin = new System.Windows.Forms.Panel();
-            this.PtbIzquierdoLogin = new System.Windows.Forms.PictureBox();
             this.TxtUsuarioLogin = new System.Windows.Forms.TextBox();
             this.LblUsuarioLogin = new System.Windows.Forms.Label();
             this.TxtContraseñaLogin = new System.Windows.Forms.TextBox();
@@ -39,14 +38,15 @@
             this.BtnEntrarLogin = new System.Windows.Forms.Button();
             this.LnblContraseñaLogin = new System.Windows.Forms.LinkLabel();
             this.PnlLoginStatusBar = new System.Windows.Forms.Panel();
+            this.BtnShowPassword = new System.Windows.Forms.Button();
             this.PtbCerrarLogin = new System.Windows.Forms.PictureBox();
             this.PtbMinimizarLogin = new System.Windows.Forms.PictureBox();
-            this.BtnShowPassword = new System.Windows.Forms.Button();
+            this.PtbIzquierdoLogin = new System.Windows.Forms.PictureBox();
             this.PnlIzquierdoLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbIzquierdoLogin)).BeginInit();
             this.PnlLoginStatusBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PtbCerrarLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbMinimizarLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbIzquierdoLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlIzquierdoLogin
@@ -58,18 +58,6 @@
             this.PnlIzquierdoLogin.Name = "PnlIzquierdoLogin";
             this.PnlIzquierdoLogin.Size = new System.Drawing.Size(283, 362);
             this.PnlIzquierdoLogin.TabIndex = 0;
-            // 
-            // PtbIzquierdoLogin
-            // 
-            this.PtbIzquierdoLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PtbIzquierdoLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PtbIzquierdoLogin.Image = global::Biblioteca_de_Peliculas.Properties.Resources.Fondo;
-            this.PtbIzquierdoLogin.Location = new System.Drawing.Point(0, 0);
-            this.PtbIzquierdoLogin.Name = "PtbIzquierdoLogin";
-            this.PtbIzquierdoLogin.Size = new System.Drawing.Size(283, 362);
-            this.PtbIzquierdoLogin.TabIndex = 11;
-            this.PtbIzquierdoLogin.TabStop = false;
-            this.PtbIzquierdoLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PtbIzquierdoLogin_MouseDown);
             // 
             // TxtUsuarioLogin
             // 
@@ -175,9 +163,22 @@
             this.PnlLoginStatusBar.TabIndex = 14;
             this.PnlLoginStatusBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlLoginStatusBar_MouseDown);
             // 
+            // BtnShowPassword
+            // 
+            this.BtnShowPassword.FlatAppearance.BorderSize = 0;
+            this.BtnShowPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.BtnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnShowPassword.Image = global::Biblioteca_de_Peliculas.Properties.Resources.blind;
+            this.BtnShowPassword.Location = new System.Drawing.Point(767, 163);
+            this.BtnShowPassword.Name = "BtnShowPassword";
+            this.BtnShowPassword.Size = new System.Drawing.Size(32, 32);
+            this.BtnShowPassword.TabIndex = 15;
+            this.BtnShowPassword.UseVisualStyleBackColor = false;
+            this.BtnShowPassword.Click += new System.EventHandler(this.BtnShowPassword_Click);
+            // 
             // PtbCerrarLogin
             // 
-            this.PtbCerrarLogin.Image = global::Biblioteca_de_Peliculas.Properties.Resources.close;
+            this.PtbCerrarLogin.Image = ((System.Drawing.Image)(resources.GetObject("PtbCerrarLogin.Image")));
             this.PtbCerrarLogin.Location = new System.Drawing.Point(571, 0);
             this.PtbCerrarLogin.Name = "PtbCerrarLogin";
             this.PtbCerrarLogin.Size = new System.Drawing.Size(32, 36);
@@ -188,7 +189,7 @@
             // 
             // PtbMinimizarLogin
             // 
-            this.PtbMinimizarLogin.Image = global::Biblioteca_de_Peliculas.Properties.Resources.minimize;
+            this.PtbMinimizarLogin.Image = ((System.Drawing.Image)(resources.GetObject("PtbMinimizarLogin.Image")));
             this.PtbMinimizarLogin.Location = new System.Drawing.Point(542, 0);
             this.PtbMinimizarLogin.Name = "PtbMinimizarLogin";
             this.PtbMinimizarLogin.Size = new System.Drawing.Size(32, 36);
@@ -197,17 +198,17 @@
             this.PtbMinimizarLogin.TabStop = false;
             this.PtbMinimizarLogin.Click += new System.EventHandler(this.PtbMinimizar_Click);
             // 
-            // BtnShowPassword
+            // PtbIzquierdoLogin
             // 
-            this.BtnShowPassword.FlatAppearance.BorderSize = 0;
-            this.BtnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnShowPassword.Image = global::Biblioteca_de_Peliculas.Properties.Resources.eye;
-            this.BtnShowPassword.Location = new System.Drawing.Point(767, 163);
-            this.BtnShowPassword.Name = "BtnShowPassword";
-            this.BtnShowPassword.Size = new System.Drawing.Size(32, 32);
-            this.BtnShowPassword.TabIndex = 15;
-            this.BtnShowPassword.UseVisualStyleBackColor = false;
-            this.BtnShowPassword.Click += new System.EventHandler(this.BtnShowPassword_Click);
+            this.PtbIzquierdoLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PtbIzquierdoLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PtbIzquierdoLogin.Image = global::Biblioteca_de_Peliculas.Properties.Resources.Fondo;
+            this.PtbIzquierdoLogin.Location = new System.Drawing.Point(0, 0);
+            this.PtbIzquierdoLogin.Name = "PtbIzquierdoLogin";
+            this.PtbIzquierdoLogin.Size = new System.Drawing.Size(283, 362);
+            this.PtbIzquierdoLogin.TabIndex = 11;
+            this.PtbIzquierdoLogin.TabStop = false;
+            this.PtbIzquierdoLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PtbIzquierdoLogin_MouseDown);
             // 
             // DlgLogin
             // 
@@ -230,16 +231,15 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DlgLogin";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DlgLogin_FormClosing);
             this.Load += new System.EventHandler(this.DlgLogin_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DlgLogin_MouseDown);
             this.PnlIzquierdoLogin.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PtbIzquierdoLogin)).EndInit();
             this.PnlLoginStatusBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PtbCerrarLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbMinimizarLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbIzquierdoLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
