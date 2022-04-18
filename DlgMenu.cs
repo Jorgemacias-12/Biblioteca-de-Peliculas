@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-
 namespace Biblioteca_de_Peliculas
 {
     public partial class DlgMenu : Form
@@ -20,6 +19,7 @@ namespace Biblioteca_de_Peliculas
             AjustarDiseño();
         }
 
+        #region posicionVentana
         //╔═════════════════════════════════╗
         //║ Mover la posición de la ventana ║
         //╚═════════════════════════════════╝
@@ -33,31 +33,35 @@ namespace Biblioteca_de_Peliculas
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void PnlMenuSideBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapure();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PtbVideoMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapure();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
         private void FlpMenuStatusBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapure();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void PnlMenuContainer_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapure();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
 
-        //╔════════════════╗
-        //║ Cerrar ventana ║
-        //╚════════════════╝
+        #endregion
 
+
+        //  ╔════════════════╗
+        //  ║ Cerrar ventana ║
+        //  ╚════════════════╝
         private void BtnClose_Click(object sender, EventArgs e)
         {
             DlgMensajeCerrarMenu dlgMensajeCerrarMenu = new DlgMensajeCerrarMenu();
             dlgMensajeCerrarMenu.Show();
-        }
-
-        private void BtnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
 
         private void DlgMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -65,27 +69,31 @@ namespace Biblioteca_de_Peliculas
             Application.Exit();
         }
 
-        //╔═══════════════════╗
-        //║ Minimizar ventana ║
-        //╚═══════════════════╝
-        private void pictureBox1_Click(object sender, EventArgs e)
+        //  ╔═══════════════════╗
+        //  ║ Minimizar ventana ║
+        //  ╚═══════════════════╝
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        //╔═══════════════════╗
-        //║ Ajustar paneles   ║
-        //╚═══════════════════╝
+        
+
+
+        //  ╔═══════════════════╗
+        //  ║ Ajustar paneles   ║
+        //  ╚═══════════════════╝
         private void AjustarDiseño()
         {
             PnlCategoriasMenu.Visible = false;
             PnlHerramientasMenu.Visible = false;
             PnlAyudaMenu.Visible = false;
+
         }
 
-        //╔═══════════════════╗
-        //║ Minimizar paneles ║
-        //╚═══════════════════╝
+        //  ╔═══════════════════╗
+        //  ║ Minimizar paneles ║
+        //  ╚═══════════════════╝
         private void OcultarSubMenu()
         {
 
@@ -316,10 +324,6 @@ namespace Biblioteca_de_Peliculas
             VentanaHijo.BringToFront();
             VentanaHijo.Show();
         }
-
-        private void BtnConfiguracionesMenu_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

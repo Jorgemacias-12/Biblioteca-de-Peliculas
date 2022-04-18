@@ -32,37 +32,37 @@
             this.PnlDlgContainer = new System.Windows.Forms.Panel();
             this.PnlMenuContainer = new System.Windows.Forms.Panel();
             this.PnlMenuSideBar = new System.Windows.Forms.Panel();
-            this.PtbLogoPanelMenu = new System.Windows.Forms.PictureBox();
             this.PnlAyudaMenu = new System.Windows.Forms.Panel();
+            this.PnlHerramientasMenu = new System.Windows.Forms.Panel();
+            this.PnlCategoriasMenu = new System.Windows.Forms.Panel();
+            this.FlpMenuStatusBar = new System.Windows.Forms.FlowLayoutPanel();
+            this.LblProgramTitle = new System.Windows.Forms.Label();
+            this.BtnCategoriasMenu = new System.Windows.Forms.Button();
+            this.PtbLogoPanelMenu = new System.Windows.Forms.PictureBox();
+            this.BtnClose = new System.Windows.Forms.Button();
+            this.BtnMinimize = new System.Windows.Forms.Button();
+            this.PbxProgramIcon = new System.Windows.Forms.PictureBox();
+            this.BtnCategoriaInicioMenu = new System.Windows.Forms.Button();
+            this.BtnCategoriaAnimadasMenu = new System.Windows.Forms.Button();
+            this.BtnCategoriaAccionMenu = new System.Windows.Forms.Button();
+            this.BtnCategoriaTerrorMenu = new System.Windows.Forms.Button();
+            this.BtnCategoriaComediasMenu = new System.Windows.Forms.Button();
+            this.BtnConfiguracionesMenu = new System.Windows.Forms.Button();
+            this.PtbVideoMenu = new System.Windows.Forms.PictureBox();
+            this.PnlFormulariosHijosMenu = new System.Windows.Forms.Panel();
+            this.BtnHerramientaColorOscuroMenu = new System.Windows.Forms.Button();
+            this.BtnHerramientaColorClaroMenu = new System.Windows.Forms.Button();
             this.BtnAcercaDeMenu = new System.Windows.Forms.Button();
             this.BtnManualMenu = new System.Windows.Forms.Button();
             this.BtnAyudaMenu = new System.Windows.Forms.Button();
-            this.PnlHerramientasMenu = new System.Windows.Forms.Panel();
-            this.BtnHerramientaColorOscuroMenu = new System.Windows.Forms.Button();
-            this.BtnHerramientaColorClaroMenu = new System.Windows.Forms.Button();
-            this.BtnConfiguracionesMenu = new System.Windows.Forms.Button();
-            this.PnlCategoriasMenu = new System.Windows.Forms.Panel();
-            this.BtnCategoriaTerrorMenu = new System.Windows.Forms.Button();
-            this.BtnCategoriaComediasMenu = new System.Windows.Forms.Button();
-            this.BtnCategoriaAnimadasMenu = new System.Windows.Forms.Button();
-            this.BtnCategoriaAccionMenu = new System.Windows.Forms.Button();
-            this.BtnCategoriaInicioMenu = new System.Windows.Forms.Button();
-            this.BtnCategoriasMenu = new System.Windows.Forms.Button();
-            this.FlpMenuStatusBar = new System.Windows.Forms.FlowLayoutPanel();
-            this.BtnClose = new System.Windows.Forms.Button();
-            this.BtnMinimize = new System.Windows.Forms.Button();
-            this.PnlFormulariosHijosMenu = new System.Windows.Forms.Panel();
-            this.PtbVideoMenu = new System.Windows.Forms.PictureBox();
             this.PnlDlgContainer.SuspendLayout();
             this.PnlMenuContainer.SuspendLayout();
             this.PnlMenuSideBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbLogoPanelMenu)).BeginInit();
-            this.PnlAyudaMenu.SuspendLayout();
-            this.PnlHerramientasMenu.SuspendLayout();
-            this.PnlCategoriasMenu.SuspendLayout();
             this.FlpMenuStatusBar.SuspendLayout();
-            this.PnlFormulariosHijosMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbLogoPanelMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxProgramIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbVideoMenu)).BeginInit();
+            this.PnlFormulariosHijosMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlDlgContainer
@@ -76,7 +76,6 @@
             this.PnlDlgContainer.Name = "PnlDlgContainer";
             this.PnlDlgContainer.Size = new System.Drawing.Size(1239, 700);
             this.PnlDlgContainer.TabIndex = 15;
-            this.PnlDlgContainer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlMenuContainer_MouseDown);
             // 
             // PnlMenuContainer
             // 
@@ -92,299 +91,86 @@
             // 
             // PnlMenuSideBar
             // 
+            this.PnlMenuSideBar.Controls.Add(this.BtnAcercaDeMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnManualMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnAyudaMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnHerramientaColorOscuroMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnHerramientaColorClaroMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnConfiguracionesMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnCategoriaTerrorMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnCategoriaComediasMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnCategoriaAnimadasMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnCategoriaAccionMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnCategoriaInicioMenu);
+            this.PnlMenuSideBar.Controls.Add(this.BtnCategoriasMenu);
             this.PnlMenuSideBar.Controls.Add(this.PtbLogoPanelMenu);
             this.PnlMenuSideBar.Controls.Add(this.PnlAyudaMenu);
-            this.PnlMenuSideBar.Controls.Add(this.BtnAyudaMenu);
             this.PnlMenuSideBar.Controls.Add(this.PnlHerramientasMenu);
-            this.PnlMenuSideBar.Controls.Add(this.BtnConfiguracionesMenu);
             this.PnlMenuSideBar.Controls.Add(this.PnlCategoriasMenu);
-            this.PnlMenuSideBar.Controls.Add(this.BtnCategoriasMenu);
             this.PnlMenuSideBar.Dock = System.Windows.Forms.DockStyle.Right;
             this.PnlMenuSideBar.Location = new System.Drawing.Point(968, 0);
             this.PnlMenuSideBar.Name = "PnlMenuSideBar";
             this.PnlMenuSideBar.Size = new System.Drawing.Size(271, 668);
             this.PnlMenuSideBar.TabIndex = 3;
-            // 
-            // PtbLogoPanelMenu
-            // 
-            this.PtbLogoPanelMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PtbLogoPanelMenu.Image = ((System.Drawing.Image)(resources.GetObject("PtbLogoPanelMenu.Image")));
-            this.PtbLogoPanelMenu.Location = new System.Drawing.Point(0, 555);
-            this.PtbLogoPanelMenu.Name = "PtbLogoPanelMenu";
-            this.PtbLogoPanelMenu.Size = new System.Drawing.Size(271, 110);
-            this.PtbLogoPanelMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PtbLogoPanelMenu.TabIndex = 9;
-            this.PtbLogoPanelMenu.TabStop = false;
+            this.PnlMenuSideBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlMenuSideBar_MouseDown);
             // 
             // PnlAyudaMenu
             // 
             this.PnlAyudaMenu.AutoSize = true;
             this.PnlAyudaMenu.BackColor = System.Drawing.Color.Black;
-            this.PnlAyudaMenu.Controls.Add(this.BtnAcercaDeMenu);
-            this.PnlAyudaMenu.Controls.Add(this.BtnManualMenu);
             this.PnlAyudaMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlAyudaMenu.Location = new System.Drawing.Point(0, 465);
+            this.PnlAyudaMenu.Location = new System.Drawing.Point(0, 0);
             this.PnlAyudaMenu.Name = "PnlAyudaMenu";
-            this.PnlAyudaMenu.Size = new System.Drawing.Size(271, 90);
+            this.PnlAyudaMenu.Size = new System.Drawing.Size(271, 0);
             this.PnlAyudaMenu.TabIndex = 8;
-            // 
-            // BtnAcercaDeMenu
-            // 
-            this.BtnAcercaDeMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
-            this.BtnAcercaDeMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnAcercaDeMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnAcercaDeMenu.FlatAppearance.BorderSize = 0;
-            this.BtnAcercaDeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAcercaDeMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAcercaDeMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnAcercaDeMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnAcercaDeMenu.Image")));
-            this.BtnAcercaDeMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAcercaDeMenu.Location = new System.Drawing.Point(0, 45);
-            this.BtnAcercaDeMenu.Name = "BtnAcercaDeMenu";
-            this.BtnAcercaDeMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.BtnAcercaDeMenu.Size = new System.Drawing.Size(271, 45);
-            this.BtnAcercaDeMenu.TabIndex = 1;
-            this.BtnAcercaDeMenu.Text = "Acerca de";
-            this.BtnAcercaDeMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAcercaDeMenu.UseVisualStyleBackColor = false;
-            this.BtnAcercaDeMenu.Click += new System.EventHandler(this.BtnAcercaDeMenu_Click);
-            // 
-            // BtnManualMenu
-            // 
-            this.BtnManualMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
-            this.BtnManualMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnManualMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnManualMenu.FlatAppearance.BorderSize = 0;
-            this.BtnManualMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnManualMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnManualMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnManualMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnManualMenu.Image")));
-            this.BtnManualMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnManualMenu.Location = new System.Drawing.Point(0, 0);
-            this.BtnManualMenu.Name = "BtnManualMenu";
-            this.BtnManualMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.BtnManualMenu.Size = new System.Drawing.Size(271, 45);
-            this.BtnManualMenu.TabIndex = 0;
-            this.BtnManualMenu.Text = "Manual";
-            this.BtnManualMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnManualMenu.UseVisualStyleBackColor = false;
-            this.BtnManualMenu.Click += new System.EventHandler(this.BtnManualMenu_Click);
-            // 
-            // BtnAyudaMenu
-            // 
-            this.BtnAyudaMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.BtnAyudaMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnAyudaMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnAyudaMenu.FlatAppearance.BorderSize = 0;
-            this.BtnAyudaMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAyudaMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAyudaMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnAyudaMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnAyudaMenu.Image")));
-            this.BtnAyudaMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAyudaMenu.Location = new System.Drawing.Point(0, 415);
-            this.BtnAyudaMenu.Name = "BtnAyudaMenu";
-            this.BtnAyudaMenu.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            this.BtnAyudaMenu.Size = new System.Drawing.Size(271, 50);
-            this.BtnAyudaMenu.TabIndex = 7;
-            this.BtnAyudaMenu.Text = "Ayuda";
-            this.BtnAyudaMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAyudaMenu.UseVisualStyleBackColor = false;
-            this.BtnAyudaMenu.Click += new System.EventHandler(this.BtnAyudaMenu_Click);
             // 
             // PnlHerramientasMenu
             // 
             this.PnlHerramientasMenu.AutoSize = true;
             this.PnlHerramientasMenu.BackColor = System.Drawing.Color.Black;
-            this.PnlHerramientasMenu.Controls.Add(this.BtnHerramientaColorOscuroMenu);
-            this.PnlHerramientasMenu.Controls.Add(this.BtnHerramientaColorClaroMenu);
             this.PnlHerramientasMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlHerramientasMenu.Location = new System.Drawing.Point(0, 325);
+            this.PnlHerramientasMenu.Location = new System.Drawing.Point(0, 0);
             this.PnlHerramientasMenu.Name = "PnlHerramientasMenu";
-            this.PnlHerramientasMenu.Size = new System.Drawing.Size(271, 90);
+            this.PnlHerramientasMenu.Size = new System.Drawing.Size(271, 0);
             this.PnlHerramientasMenu.TabIndex = 6;
-            // 
-            // BtnHerramientaColorOscuroMenu
-            // 
-            this.BtnHerramientaColorOscuroMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
-            this.BtnHerramientaColorOscuroMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnHerramientaColorOscuroMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnHerramientaColorOscuroMenu.FlatAppearance.BorderSize = 0;
-            this.BtnHerramientaColorOscuroMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHerramientaColorOscuroMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnHerramientaColorOscuroMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnHerramientaColorOscuroMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnHerramientaColorOscuroMenu.Image")));
-            this.BtnHerramientaColorOscuroMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnHerramientaColorOscuroMenu.Location = new System.Drawing.Point(0, 45);
-            this.BtnHerramientaColorOscuroMenu.Name = "BtnHerramientaColorOscuroMenu";
-            this.BtnHerramientaColorOscuroMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.BtnHerramientaColorOscuroMenu.Size = new System.Drawing.Size(271, 45);
-            this.BtnHerramientaColorOscuroMenu.TabIndex = 2;
-            this.BtnHerramientaColorOscuroMenu.Text = "Modo Oscuro";
-            this.BtnHerramientaColorOscuroMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnHerramientaColorOscuroMenu.UseVisualStyleBackColor = false;
-            // 
-            // BtnHerramientaColorClaroMenu
-            // 
-            this.BtnHerramientaColorClaroMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
-            this.BtnHerramientaColorClaroMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnHerramientaColorClaroMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnHerramientaColorClaroMenu.FlatAppearance.BorderSize = 0;
-            this.BtnHerramientaColorClaroMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHerramientaColorClaroMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnHerramientaColorClaroMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnHerramientaColorClaroMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnHerramientaColorClaroMenu.Image")));
-            this.BtnHerramientaColorClaroMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnHerramientaColorClaroMenu.Location = new System.Drawing.Point(0, 0);
-            this.BtnHerramientaColorClaroMenu.Name = "BtnHerramientaColorClaroMenu";
-            this.BtnHerramientaColorClaroMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.BtnHerramientaColorClaroMenu.Size = new System.Drawing.Size(271, 45);
-            this.BtnHerramientaColorClaroMenu.TabIndex = 1;
-            this.BtnHerramientaColorClaroMenu.Text = "Modo Claro";
-            this.BtnHerramientaColorClaroMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnHerramientaColorClaroMenu.UseVisualStyleBackColor = false;
-            this.BtnHerramientaColorClaroMenu.ClientSizeChanged += new System.EventHandler(this.BtnHerramientaColorOscuroMenu_Click);
-            this.BtnHerramientaColorClaroMenu.Click += new System.EventHandler(this.BtnHerramientaColorClaroMenu_Click);
-            // 
-            // BtnConfiguracionesMenu
-            // 
-            this.BtnConfiguracionesMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.BtnConfiguracionesMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnConfiguracionesMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnConfiguracionesMenu.FlatAppearance.BorderSize = 0;
-            this.BtnConfiguracionesMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnConfiguracionesMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnConfiguracionesMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnConfiguracionesMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnConfiguracionesMenu.Image")));
-            this.BtnConfiguracionesMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnConfiguracionesMenu.Location = new System.Drawing.Point(0, 275);
-            this.BtnConfiguracionesMenu.Name = "BtnConfiguracionesMenu";
-            this.BtnConfiguracionesMenu.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.BtnConfiguracionesMenu.Size = new System.Drawing.Size(271, 50);
-            this.BtnConfiguracionesMenu.TabIndex = 5;
-            this.BtnConfiguracionesMenu.Text = "Configuraciones";
-            this.BtnConfiguracionesMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnConfiguracionesMenu.UseVisualStyleBackColor = false;
-            this.BtnConfiguracionesMenu.Click += new System.EventHandler(this.BtnConfiguracionesMenu_Click);
             // 
             // PnlCategoriasMenu
             // 
             this.PnlCategoriasMenu.AutoSize = true;
             this.PnlCategoriasMenu.BackColor = System.Drawing.Color.Black;
-            this.PnlCategoriasMenu.Controls.Add(this.BtnCategoriaTerrorMenu);
-            this.PnlCategoriasMenu.Controls.Add(this.BtnCategoriaComediasMenu);
-            this.PnlCategoriasMenu.Controls.Add(this.BtnCategoriaAnimadasMenu);
-            this.PnlCategoriasMenu.Controls.Add(this.BtnCategoriaAccionMenu);
-            this.PnlCategoriasMenu.Controls.Add(this.BtnCategoriaInicioMenu);
             this.PnlCategoriasMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlCategoriasMenu.Location = new System.Drawing.Point(0, 50);
+            this.PnlCategoriasMenu.Location = new System.Drawing.Point(0, 0);
             this.PnlCategoriasMenu.Name = "PnlCategoriasMenu";
-            this.PnlCategoriasMenu.Size = new System.Drawing.Size(271, 225);
+            this.PnlCategoriasMenu.Size = new System.Drawing.Size(271, 0);
             this.PnlCategoriasMenu.TabIndex = 4;
             // 
-            // BtnCategoriaTerrorMenu
+            // FlpMenuStatusBar
             // 
-            this.BtnCategoriaTerrorMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
-            this.BtnCategoriaTerrorMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCategoriaTerrorMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnCategoriaTerrorMenu.FlatAppearance.BorderSize = 0;
-            this.BtnCategoriaTerrorMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCategoriaTerrorMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCategoriaTerrorMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnCategoriaTerrorMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaTerrorMenu.Image")));
-            this.BtnCategoriaTerrorMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCategoriaTerrorMenu.Location = new System.Drawing.Point(0, 180);
-            this.BtnCategoriaTerrorMenu.Name = "BtnCategoriaTerrorMenu";
-            this.BtnCategoriaTerrorMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.BtnCategoriaTerrorMenu.Size = new System.Drawing.Size(271, 45);
-            this.BtnCategoriaTerrorMenu.TabIndex = 5;
-            this.BtnCategoriaTerrorMenu.Text = "Terror";
-            this.BtnCategoriaTerrorMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCategoriaTerrorMenu.UseVisualStyleBackColor = false;
-            this.BtnCategoriaTerrorMenu.Click += new System.EventHandler(this.BtnCategoriaTerrorMenu_Click);
+            this.FlpMenuStatusBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.FlpMenuStatusBar.Controls.Add(this.BtnClose);
+            this.FlpMenuStatusBar.Controls.Add(this.BtnMinimize);
+            this.FlpMenuStatusBar.Controls.Add(this.LblProgramTitle);
+            this.FlpMenuStatusBar.Controls.Add(this.PbxProgramIcon);
+            this.FlpMenuStatusBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FlpMenuStatusBar.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.FlpMenuStatusBar.Location = new System.Drawing.Point(0, 0);
+            this.FlpMenuStatusBar.Name = "FlpMenuStatusBar";
+            this.FlpMenuStatusBar.Size = new System.Drawing.Size(1239, 32);
+            this.FlpMenuStatusBar.TabIndex = 3;
+            this.FlpMenuStatusBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FlpMenuStatusBar_MouseDown);
             // 
-            // BtnCategoriaComediasMenu
+            // LblProgramTitle
             // 
-            this.BtnCategoriaComediasMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
-            this.BtnCategoriaComediasMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCategoriaComediasMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnCategoriaComediasMenu.FlatAppearance.BorderSize = 0;
-            this.BtnCategoriaComediasMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCategoriaComediasMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCategoriaComediasMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnCategoriaComediasMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaComediasMenu.Image")));
-            this.BtnCategoriaComediasMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCategoriaComediasMenu.Location = new System.Drawing.Point(0, 135);
-            this.BtnCategoriaComediasMenu.Name = "BtnCategoriaComediasMenu";
-            this.BtnCategoriaComediasMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.BtnCategoriaComediasMenu.Size = new System.Drawing.Size(271, 45);
-            this.BtnCategoriaComediasMenu.TabIndex = 4;
-            this.BtnCategoriaComediasMenu.Text = "Comedias";
-            this.BtnCategoriaComediasMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCategoriaComediasMenu.UseVisualStyleBackColor = false;
-            this.BtnCategoriaComediasMenu.Click += new System.EventHandler(this.BtnCategoriaComediasMenu_Click);
-            // 
-            // BtnCategoriaAnimadasMenu
-            // 
-            this.BtnCategoriaAnimadasMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
-            this.BtnCategoriaAnimadasMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCategoriaAnimadasMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnCategoriaAnimadasMenu.FlatAppearance.BorderSize = 0;
-            this.BtnCategoriaAnimadasMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCategoriaAnimadasMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCategoriaAnimadasMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnCategoriaAnimadasMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaAnimadasMenu.Image")));
-            this.BtnCategoriaAnimadasMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCategoriaAnimadasMenu.Location = new System.Drawing.Point(0, 90);
-            this.BtnCategoriaAnimadasMenu.Name = "BtnCategoriaAnimadasMenu";
-            this.BtnCategoriaAnimadasMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.BtnCategoriaAnimadasMenu.Size = new System.Drawing.Size(271, 45);
-            this.BtnCategoriaAnimadasMenu.TabIndex = 3;
-            this.BtnCategoriaAnimadasMenu.Text = "Animadas";
-            this.BtnCategoriaAnimadasMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCategoriaAnimadasMenu.UseVisualStyleBackColor = false;
-            this.BtnCategoriaAnimadasMenu.Click += new System.EventHandler(this.BtnCategoriaAnimadasMenu_Click);
-            // 
-            // BtnCategoriaAccionMenu
-            // 
-            this.BtnCategoriaAccionMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
-            this.BtnCategoriaAccionMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCategoriaAccionMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnCategoriaAccionMenu.FlatAppearance.BorderSize = 0;
-            this.BtnCategoriaAccionMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCategoriaAccionMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCategoriaAccionMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnCategoriaAccionMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaAccionMenu.Image")));
-            this.BtnCategoriaAccionMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCategoriaAccionMenu.Location = new System.Drawing.Point(0, 45);
-            this.BtnCategoriaAccionMenu.Name = "BtnCategoriaAccionMenu";
-            this.BtnCategoriaAccionMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.BtnCategoriaAccionMenu.Size = new System.Drawing.Size(271, 45);
-            this.BtnCategoriaAccionMenu.TabIndex = 2;
-            this.BtnCategoriaAccionMenu.Text = "Acción";
-            this.BtnCategoriaAccionMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCategoriaAccionMenu.UseVisualStyleBackColor = false;
-            this.BtnCategoriaAccionMenu.Click += new System.EventHandler(this.BtnCategoriaAccionMenu_Click);
-            // 
-            // BtnCategoriaInicioMenu
-            // 
-            this.BtnCategoriaInicioMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
-            this.BtnCategoriaInicioMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCategoriaInicioMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnCategoriaInicioMenu.FlatAppearance.BorderSize = 0;
-            this.BtnCategoriaInicioMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCategoriaInicioMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCategoriaInicioMenu.ForeColor = System.Drawing.Color.White;
-            this.BtnCategoriaInicioMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaInicioMenu.Image")));
-            this.BtnCategoriaInicioMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCategoriaInicioMenu.Location = new System.Drawing.Point(0, 0);
-            this.BtnCategoriaInicioMenu.Name = "BtnCategoriaInicioMenu";
-            this.BtnCategoriaInicioMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.BtnCategoriaInicioMenu.Size = new System.Drawing.Size(271, 45);
-            this.BtnCategoriaInicioMenu.TabIndex = 0;
-            this.BtnCategoriaInicioMenu.Text = "Inicio";
-            this.BtnCategoriaInicioMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCategoriaInicioMenu.UseVisualStyleBackColor = false;
-            this.BtnCategoriaInicioMenu.Click += new System.EventHandler(this.BtnCategoriaInicioMenu_Click);
+            this.LblProgramTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProgramTitle.ForeColor = System.Drawing.Color.White;
+            this.LblProgramTitle.Location = new System.Drawing.Point(38, 0);
+            this.LblProgramTitle.Margin = new System.Windows.Forms.Padding(0, 0, 975, 0);
+            this.LblProgramTitle.Name = "LblProgramTitle";
+            this.LblProgramTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LblProgramTitle.Size = new System.Drawing.Size(162, 32);
+            this.LblProgramTitle.TabIndex = 2;
+            this.LblProgramTitle.Text = "Biblioteca de peliculas";
+            this.LblProgramTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BtnCategoriasMenu
             // 
@@ -397,28 +183,27 @@
             this.BtnCategoriasMenu.ForeColor = System.Drawing.Color.White;
             this.BtnCategoriasMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriasMenu.Image")));
             this.BtnCategoriasMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCategoriasMenu.Location = new System.Drawing.Point(0, 0);
+            this.BtnCategoriasMenu.Location = new System.Drawing.Point(0, 56);
             this.BtnCategoriasMenu.Name = "BtnCategoriasMenu";
             this.BtnCategoriasMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.BtnCategoriasMenu.Size = new System.Drawing.Size(271, 50);
-            this.BtnCategoriasMenu.TabIndex = 1;
+            this.BtnCategoriasMenu.Size = new System.Drawing.Size(271, 44);
+            this.BtnCategoriasMenu.TabIndex = 11;
             this.BtnCategoriasMenu.Text = "Categorias";
             this.BtnCategoriasMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCategoriasMenu.UseVisualStyleBackColor = false;
             this.BtnCategoriasMenu.Click += new System.EventHandler(this.BtnCategoriasMenu_Click);
             // 
-            // FlpMenuStatusBar
+            // PtbLogoPanelMenu
             // 
-            this.FlpMenuStatusBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.FlpMenuStatusBar.Controls.Add(this.BtnClose);
-            this.FlpMenuStatusBar.Controls.Add(this.BtnMinimize);
-            this.FlpMenuStatusBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FlpMenuStatusBar.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.FlpMenuStatusBar.Location = new System.Drawing.Point(0, 0);
-            this.FlpMenuStatusBar.Name = "FlpMenuStatusBar";
-            this.FlpMenuStatusBar.Size = new System.Drawing.Size(1239, 32);
-            this.FlpMenuStatusBar.TabIndex = 3;
-            this.FlpMenuStatusBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FlpMenuStatusBar_MouseDown);
+            this.PtbLogoPanelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PtbLogoPanelMenu.BackgroundImage")));
+            this.PtbLogoPanelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PtbLogoPanelMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PtbLogoPanelMenu.Location = new System.Drawing.Point(0, 0);
+            this.PtbLogoPanelMenu.Name = "PtbLogoPanelMenu";
+            this.PtbLogoPanelMenu.Size = new System.Drawing.Size(271, 56);
+            this.PtbLogoPanelMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PtbLogoPanelMenu.TabIndex = 10;
+            this.PtbLogoPanelMenu.TabStop = false;
             // 
             // BtnClose
             // 
@@ -450,15 +235,140 @@
             this.BtnMinimize.UseVisualStyleBackColor = true;
             this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
-            // PnlFormulariosHijosMenu
+            // PbxProgramIcon
             // 
-            this.PnlFormulariosHijosMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.PnlFormulariosHijosMenu.Controls.Add(this.PtbVideoMenu);
-            this.PnlFormulariosHijosMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlFormulariosHijosMenu.Location = new System.Drawing.Point(0, 0);
-            this.PnlFormulariosHijosMenu.Name = "PnlFormulariosHijosMenu";
-            this.PnlFormulariosHijosMenu.Size = new System.Drawing.Size(968, 668);
-            this.PnlFormulariosHijosMenu.TabIndex = 16;
+            this.PbxProgramIcon.Image = ((System.Drawing.Image)(resources.GetObject("PbxProgramIcon.Image")));
+            this.PbxProgramIcon.Location = new System.Drawing.Point(3, 3);
+            this.PbxProgramIcon.Name = "PbxProgramIcon";
+            this.PbxProgramIcon.Size = new System.Drawing.Size(32, 32);
+            this.PbxProgramIcon.TabIndex = 3;
+            this.PbxProgramIcon.TabStop = false;
+            // 
+            // BtnCategoriaInicioMenu
+            // 
+            this.BtnCategoriaInicioMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
+            this.BtnCategoriaInicioMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCategoriaInicioMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnCategoriaInicioMenu.FlatAppearance.BorderSize = 0;
+            this.BtnCategoriaInicioMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCategoriaInicioMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCategoriaInicioMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnCategoriaInicioMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaInicioMenu.Image")));
+            this.BtnCategoriaInicioMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCategoriaInicioMenu.Location = new System.Drawing.Point(0, 100);
+            this.BtnCategoriaInicioMenu.Name = "BtnCategoriaInicioMenu";
+            this.BtnCategoriaInicioMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriaInicioMenu.Size = new System.Drawing.Size(271, 45);
+            this.BtnCategoriaInicioMenu.TabIndex = 13;
+            this.BtnCategoriaInicioMenu.Text = "Inicio";
+            this.BtnCategoriaInicioMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCategoriaInicioMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriaInicioMenu.Click += new System.EventHandler(this.BtnCategoriaInicioMenu_Click);
+            // 
+            // BtnCategoriaAnimadasMenu
+            // 
+            this.BtnCategoriaAnimadasMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
+            this.BtnCategoriaAnimadasMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCategoriaAnimadasMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnCategoriaAnimadasMenu.FlatAppearance.BorderSize = 0;
+            this.BtnCategoriaAnimadasMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCategoriaAnimadasMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCategoriaAnimadasMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnCategoriaAnimadasMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaAnimadasMenu.Image")));
+            this.BtnCategoriaAnimadasMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCategoriaAnimadasMenu.Location = new System.Drawing.Point(0, 190);
+            this.BtnCategoriaAnimadasMenu.Name = "BtnCategoriaAnimadasMenu";
+            this.BtnCategoriaAnimadasMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriaAnimadasMenu.Size = new System.Drawing.Size(271, 45);
+            this.BtnCategoriaAnimadasMenu.TabIndex = 16;
+            this.BtnCategoriaAnimadasMenu.Text = "Animadas";
+            this.BtnCategoriaAnimadasMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCategoriaAnimadasMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriaAnimadasMenu.Click += new System.EventHandler(this.BtnCategoriaAnimadasMenu_Click);
+            // 
+            // BtnCategoriaAccionMenu
+            // 
+            this.BtnCategoriaAccionMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
+            this.BtnCategoriaAccionMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCategoriaAccionMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnCategoriaAccionMenu.FlatAppearance.BorderSize = 0;
+            this.BtnCategoriaAccionMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCategoriaAccionMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCategoriaAccionMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnCategoriaAccionMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaAccionMenu.Image")));
+            this.BtnCategoriaAccionMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCategoriaAccionMenu.Location = new System.Drawing.Point(0, 145);
+            this.BtnCategoriaAccionMenu.Name = "BtnCategoriaAccionMenu";
+            this.BtnCategoriaAccionMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriaAccionMenu.Size = new System.Drawing.Size(271, 45);
+            this.BtnCategoriaAccionMenu.TabIndex = 15;
+            this.BtnCategoriaAccionMenu.Text = "Acción";
+            this.BtnCategoriaAccionMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCategoriaAccionMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriaAccionMenu.Click += new System.EventHandler(this.BtnCategoriaAccionMenu_Click);
+            // 
+            // BtnCategoriaTerrorMenu
+            // 
+            this.BtnCategoriaTerrorMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
+            this.BtnCategoriaTerrorMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCategoriaTerrorMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnCategoriaTerrorMenu.FlatAppearance.BorderSize = 0;
+            this.BtnCategoriaTerrorMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCategoriaTerrorMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCategoriaTerrorMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnCategoriaTerrorMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaTerrorMenu.Image")));
+            this.BtnCategoriaTerrorMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCategoriaTerrorMenu.Location = new System.Drawing.Point(0, 280);
+            this.BtnCategoriaTerrorMenu.Name = "BtnCategoriaTerrorMenu";
+            this.BtnCategoriaTerrorMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriaTerrorMenu.Size = new System.Drawing.Size(271, 45);
+            this.BtnCategoriaTerrorMenu.TabIndex = 18;
+            this.BtnCategoriaTerrorMenu.Text = "Terror";
+            this.BtnCategoriaTerrorMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCategoriaTerrorMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriaTerrorMenu.Click += new System.EventHandler(this.BtnCategoriaTerrorMenu_Click);
+            // 
+            // BtnCategoriaComediasMenu
+            // 
+            this.BtnCategoriaComediasMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
+            this.BtnCategoriaComediasMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCategoriaComediasMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnCategoriaComediasMenu.FlatAppearance.BorderSize = 0;
+            this.BtnCategoriaComediasMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCategoriaComediasMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCategoriaComediasMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnCategoriaComediasMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaComediasMenu.Image")));
+            this.BtnCategoriaComediasMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCategoriaComediasMenu.Location = new System.Drawing.Point(0, 235);
+            this.BtnCategoriaComediasMenu.Name = "BtnCategoriaComediasMenu";
+            this.BtnCategoriaComediasMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriaComediasMenu.Size = new System.Drawing.Size(271, 45);
+            this.BtnCategoriaComediasMenu.TabIndex = 17;
+            this.BtnCategoriaComediasMenu.Text = "Comedias";
+            this.BtnCategoriaComediasMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCategoriaComediasMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriaComediasMenu.Click += new System.EventHandler(this.BtnCategoriaComediasMenu_Click);
+            // 
+            // BtnConfiguracionesMenu
+            // 
+            this.BtnConfiguracionesMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnConfiguracionesMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnConfiguracionesMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnConfiguracionesMenu.FlatAppearance.BorderSize = 0;
+            this.BtnConfiguracionesMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConfiguracionesMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConfiguracionesMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnConfiguracionesMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnConfiguracionesMenu.Image")));
+            this.BtnConfiguracionesMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnConfiguracionesMenu.Location = new System.Drawing.Point(0, 325);
+            this.BtnConfiguracionesMenu.Name = "BtnConfiguracionesMenu";
+            this.BtnConfiguracionesMenu.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.BtnConfiguracionesMenu.Size = new System.Drawing.Size(271, 50);
+            this.BtnConfiguracionesMenu.TabIndex = 24;
+            this.BtnConfiguracionesMenu.Text = "Configuraciones";
+            this.BtnConfiguracionesMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnConfiguracionesMenu.UseVisualStyleBackColor = false;
+            this.BtnConfiguracionesMenu.Click += new System.EventHandler(this.BtnConfiguracionesMenu_Click);
             // 
             // PtbVideoMenu
             // 
@@ -470,6 +380,122 @@
             this.PtbVideoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PtbVideoMenu.TabIndex = 0;
             this.PtbVideoMenu.TabStop = false;
+            this.PtbVideoMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PtbVideoMenu_MouseDown);
+            // 
+            // PnlFormulariosHijosMenu
+            // 
+            this.PnlFormulariosHijosMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.PnlFormulariosHijosMenu.Controls.Add(this.PtbVideoMenu);
+            this.PnlFormulariosHijosMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlFormulariosHijosMenu.Location = new System.Drawing.Point(0, 0);
+            this.PnlFormulariosHijosMenu.Name = "PnlFormulariosHijosMenu";
+            this.PnlFormulariosHijosMenu.Size = new System.Drawing.Size(968, 668);
+            this.PnlFormulariosHijosMenu.TabIndex = 16;
+            // 
+            // BtnHerramientaColorOscuroMenu
+            // 
+            this.BtnHerramientaColorOscuroMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
+            this.BtnHerramientaColorOscuroMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnHerramientaColorOscuroMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnHerramientaColorOscuroMenu.FlatAppearance.BorderSize = 0;
+            this.BtnHerramientaColorOscuroMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHerramientaColorOscuroMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHerramientaColorOscuroMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnHerramientaColorOscuroMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnHerramientaColorOscuroMenu.Image")));
+            this.BtnHerramientaColorOscuroMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnHerramientaColorOscuroMenu.Location = new System.Drawing.Point(0, 420);
+            this.BtnHerramientaColorOscuroMenu.Name = "BtnHerramientaColorOscuroMenu";
+            this.BtnHerramientaColorOscuroMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnHerramientaColorOscuroMenu.Size = new System.Drawing.Size(271, 45);
+            this.BtnHerramientaColorOscuroMenu.TabIndex = 27;
+            this.BtnHerramientaColorOscuroMenu.Text = "Modo Oscuro";
+            this.BtnHerramientaColorOscuroMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnHerramientaColorOscuroMenu.UseVisualStyleBackColor = false;
+            this.BtnHerramientaColorOscuroMenu.Click += new System.EventHandler(this.BtnHerramientaColorOscuroMenu_Click);
+            // 
+            // BtnHerramientaColorClaroMenu
+            // 
+            this.BtnHerramientaColorClaroMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
+            this.BtnHerramientaColorClaroMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnHerramientaColorClaroMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnHerramientaColorClaroMenu.FlatAppearance.BorderSize = 0;
+            this.BtnHerramientaColorClaroMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHerramientaColorClaroMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHerramientaColorClaroMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnHerramientaColorClaroMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnHerramientaColorClaroMenu.Image")));
+            this.BtnHerramientaColorClaroMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnHerramientaColorClaroMenu.Location = new System.Drawing.Point(0, 375);
+            this.BtnHerramientaColorClaroMenu.Name = "BtnHerramientaColorClaroMenu";
+            this.BtnHerramientaColorClaroMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnHerramientaColorClaroMenu.Size = new System.Drawing.Size(271, 45);
+            this.BtnHerramientaColorClaroMenu.TabIndex = 26;
+            this.BtnHerramientaColorClaroMenu.Text = "Modo Claro";
+            this.BtnHerramientaColorClaroMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnHerramientaColorClaroMenu.UseVisualStyleBackColor = false;
+            this.BtnHerramientaColorClaroMenu.Click += new System.EventHandler(this.BtnHerramientaColorClaroMenu_Click);
+            // 
+            // BtnAcercaDeMenu
+            // 
+            this.BtnAcercaDeMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
+            this.BtnAcercaDeMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAcercaDeMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnAcercaDeMenu.FlatAppearance.BorderSize = 0;
+            this.BtnAcercaDeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAcercaDeMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAcercaDeMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnAcercaDeMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnAcercaDeMenu.Image")));
+            this.BtnAcercaDeMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAcercaDeMenu.Location = new System.Drawing.Point(0, 560);
+            this.BtnAcercaDeMenu.Name = "BtnAcercaDeMenu";
+            this.BtnAcercaDeMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnAcercaDeMenu.Size = new System.Drawing.Size(271, 45);
+            this.BtnAcercaDeMenu.TabIndex = 31;
+            this.BtnAcercaDeMenu.Text = "Acerca de";
+            this.BtnAcercaDeMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAcercaDeMenu.UseVisualStyleBackColor = false;
+            this.BtnAcercaDeMenu.Click += new System.EventHandler(this.BtnAcercaDeMenu_Click);
+            // 
+            // BtnManualMenu
+            // 
+            this.BtnManualMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
+            this.BtnManualMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnManualMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnManualMenu.FlatAppearance.BorderSize = 0;
+            this.BtnManualMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnManualMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnManualMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnManualMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnManualMenu.Image")));
+            this.BtnManualMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnManualMenu.Location = new System.Drawing.Point(0, 515);
+            this.BtnManualMenu.Name = "BtnManualMenu";
+            this.BtnManualMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnManualMenu.Size = new System.Drawing.Size(271, 45);
+            this.BtnManualMenu.TabIndex = 30;
+            this.BtnManualMenu.Text = "Manual";
+            this.BtnManualMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnManualMenu.UseVisualStyleBackColor = false;
+            this.BtnManualMenu.Click += new System.EventHandler(this.BtnManualMenu_Click);
+            // 
+            // BtnAyudaMenu
+            // 
+            this.BtnAyudaMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnAyudaMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAyudaMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnAyudaMenu.FlatAppearance.BorderSize = 0;
+            this.BtnAyudaMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAyudaMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAyudaMenu.ForeColor = System.Drawing.Color.White;
+            this.BtnAyudaMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnAyudaMenu.Image")));
+            this.BtnAyudaMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAyudaMenu.Location = new System.Drawing.Point(0, 465);
+            this.BtnAyudaMenu.Name = "BtnAyudaMenu";
+            this.BtnAyudaMenu.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
+            this.BtnAyudaMenu.Size = new System.Drawing.Size(271, 50);
+            this.BtnAyudaMenu.TabIndex = 29;
+            this.BtnAyudaMenu.Text = "Ayuda";
+            this.BtnAyudaMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAyudaMenu.UseVisualStyleBackColor = false;
+            this.BtnAyudaMenu.Click += new System.EventHandler(this.BtnAyudaMenu_Click);
             // 
             // DlgMenu
             // 
@@ -488,41 +514,41 @@
             this.PnlMenuContainer.ResumeLayout(false);
             this.PnlMenuSideBar.ResumeLayout(false);
             this.PnlMenuSideBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbLogoPanelMenu)).EndInit();
-            this.PnlAyudaMenu.ResumeLayout(false);
-            this.PnlHerramientasMenu.ResumeLayout(false);
-            this.PnlCategoriasMenu.ResumeLayout(false);
             this.FlpMenuStatusBar.ResumeLayout(false);
-            this.PnlFormulariosHijosMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PtbLogoPanelMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxProgramIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbVideoMenu)).EndInit();
+            this.PnlFormulariosHijosMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel PnlDlgContainer;
-        private System.Windows.Forms.Button BtnCategoriasMenu;
-        private System.Windows.Forms.Button BtnCategoriaInicioMenu;
-        private System.Windows.Forms.Button BtnManualMenu;
-        private System.Windows.Forms.Panel PnlFormulariosHijosMenu;
-        private System.Windows.Forms.PictureBox PtbVideoMenu;
-        private System.Windows.Forms.Button BtnAcercaDeMenu;
         private System.Windows.Forms.FlowLayoutPanel FlpMenuStatusBar;
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Button BtnMinimize;
         private System.Windows.Forms.Panel PnlMenuContainer;
         private System.Windows.Forms.Panel PnlMenuSideBar;
         private System.Windows.Forms.Panel PnlCategoriasMenu;
-        private System.Windows.Forms.Button BtnCategoriaAccionMenu;
-        private System.Windows.Forms.Button BtnCategoriaAnimadasMenu;
-        private System.Windows.Forms.Button BtnCategoriaComediasMenu;
-        private System.Windows.Forms.Button BtnCategoriaTerrorMenu;
-        private System.Windows.Forms.Button BtnConfiguracionesMenu;
         private System.Windows.Forms.Panel PnlHerramientasMenu;
-        private System.Windows.Forms.Button BtnHerramientaColorOscuroMenu;
-        private System.Windows.Forms.Button BtnHerramientaColorClaroMenu;
-        private System.Windows.Forms.Button BtnAyudaMenu;
         private System.Windows.Forms.Panel PnlAyudaMenu;
         private System.Windows.Forms.PictureBox PtbLogoPanelMenu;
+        private System.Windows.Forms.Label LblProgramTitle;
+        private System.Windows.Forms.PictureBox PbxProgramIcon;
+        private System.Windows.Forms.Button BtnCategoriasMenu;
+        private System.Windows.Forms.Button BtnCategoriaTerrorMenu;
+        private System.Windows.Forms.Button BtnCategoriaComediasMenu;
+        private System.Windows.Forms.Button BtnCategoriaAnimadasMenu;
+        private System.Windows.Forms.Button BtnCategoriaAccionMenu;
+        private System.Windows.Forms.Button BtnCategoriaInicioMenu;
+        private System.Windows.Forms.Button BtnConfiguracionesMenu;
+        private System.Windows.Forms.Panel PnlFormulariosHijosMenu;
+        private System.Windows.Forms.PictureBox PtbVideoMenu;
+        private System.Windows.Forms.Button BtnHerramientaColorOscuroMenu;
+        private System.Windows.Forms.Button BtnHerramientaColorClaroMenu;
+        private System.Windows.Forms.Button BtnAcercaDeMenu;
+        private System.Windows.Forms.Button BtnManualMenu;
+        private System.Windows.Forms.Button BtnAyudaMenu;
     }
 }
