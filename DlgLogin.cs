@@ -13,9 +13,9 @@ namespace Biblioteca_de_Peliculas
 {
     public partial class DlgLogin : Form
     {
-        //╔═══════════╗
-        //║ Variables ║
-        //╚═══════════╝
+        //  ╔════════════════════╗
+        //  ║ Variables globales ║
+        //  ╚════════════════════╝
         string Usuario = "";
         string Contraseña = "";
         DlgMenu dlgmenu = new DlgMenu();
@@ -25,17 +25,27 @@ namespace Biblioteca_de_Peliculas
             InitializeComponent();
         }
 
-        //╔═════════════════════════════════╗
-        //║ Mover la posición de la ventana ║
-        //╚═════════════════════════════════╝
-        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapure();
-        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        //  ╔═════════════════════════════════╗
+        //  ║ Mover la posición de la ventana ║
+        //  ╚═════════════════════════════════╝
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")] // Importar user32.dll,y un punto de entrada
+        private extern static void ReleaseCapure(); // Definición del método  para capturar cuando se suelta la ventana
+        [DllImport("user32.dll", EntryPoint = "SendMessage")] // "", y como punto de entrada SendMessage
+        // Definición del método para enviar un mensaje  (referente al puntero del ratón(? no tengo ni idea)
         private extern static void SendMessage(System.IntPtr hwnd, int wsmg, int wparam, int lparam);
+
+        //  ╔═══════════════════════════════════════╗
+        //  ║ Evento - Mover posición de la ventana ║
+        //  ╚═══════════════════════════════════════╝
+
         private void DlgLogin_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapure();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            // Llama al método sendMessage enviando el manejador de la ventana, y algunas constantes numéricas
+            // En resumen, visita los enlaces y trata de encontrar estos valores :u
+            // Para entender mejor esta parte visita: https://docs.microsoft.com/es-mx/windows/win32/api/winuser/nf-winuser-sendmessage?redirectedfrom=MSDN
+            // tipos de mensajes https://docs.microsoft.com/en-us/windows/win32/winmsg/about-messages-and-message-queues
+            SendMessage(this.Handle, 0x112, 0xf012, 0); 
         }
         private void LblTituloLogin_MouseDown(object sender, MouseEventArgs e)
         {
@@ -43,29 +53,30 @@ namespace Biblioteca_de_Peliculas
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        //╔════════════════╗
-        //║ Cerrar ventana ║
-        //╚════════════════╝
+        //╔═════════════════════════╗
+        //║ Evento - Cerrar ventana ║
+        //╚═════════════════════════╝
         private void PtbCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
         private void DlgLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
-        //╔═══════════════════╗
-        //║ Minimizar ventana ║
-        //╚═══════════════════╝
+        //  ╔════════════════════════════╗
+        //  ║ Evento - Minimizar ventana ║
+        //  ╚════════════════════════════╝
         private void PtbMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        //╔══════════════════════════════════╗
-        //║ Inicialización de cajas de texto ║
-        //╚══════════════════════════════════╝
+        //  ╔══════════════════════════════════╗
+        //  ║ Inicialización de cajas de texto ║
+        //  ╚══════════════════════════════════╝
         private void DlgLogin_Load(object sender, EventArgs e)
         {
             TxtUsuarioLogin.Text = "USUARIO";
@@ -74,9 +85,9 @@ namespace Biblioteca_de_Peliculas
             TxtContraseñaLogin.ForeColor = Color.DimGray;
         }
 
-        //╔══════════════════════════════════════════════════════╗
-        //║ Al entrar a la caja de texto se borra su predefinido ║
-        //╚══════════════════════════════════════════════════════╝
+        //  ╔══════════════════════════════════════════════════════╗
+        //  ║ Al entrar a la caja de texto se borra su predefinido ║
+        //  ╚══════════════════════════════════════════════════════╝
         private void TxtUsuario_Enter(object sender, EventArgs e)
         {
             Usuario = TxtUsuarioLogin.Text;
@@ -87,9 +98,9 @@ namespace Biblioteca_de_Peliculas
             }
         }
 
-        //╔══════════════════════════════════════════════════════╗
-        //║ Al entrar a la caja de texto se borra su predefinido ║
-        //╚══════════════════════════════════════════════════════╝
+        //  ╔══════════════════════════════════════════════════════╗
+        //  ║ Al entrar a la caja de texto se borra su predefinido ║
+        //  ╚══════════════════════════════════════════════════════╝
         private void TxtContraseña_Enter(object sender, EventArgs e)
         {
             Contraseña = TxtContraseñaLogin.Text;
@@ -101,9 +112,9 @@ namespace Biblioteca_de_Peliculas
             }
         }
 
-        //╔══════════════════════════════════════════════════════╗
-        //║ Al dejar la caja de texto se hace hacen validaciones ║
-        //╚══════════════════════════════════════════════════════╝
+        //  ╔══════════════════════════════════════════════════════╗
+        //  ║ Al dejar la caja de texto se hace hacen validaciones ║
+        //  ╚══════════════════════════════════════════════════════╝
         private void TxtUsuario_Leave(object sender, EventArgs e)
         {
             Usuario = TxtUsuarioLogin.Text;
@@ -127,9 +138,9 @@ namespace Biblioteca_de_Peliculas
             }
         }
 
-        //╔══════════════════════════════════════════════════════╗
-        //║ Al dejar la caja de texto se hace hacen validaciones ║
-        //╚══════════════════════════════════════════════════════╝
+        //  ╔══════════════════════════════════════════════════════╗
+        //  ║ Al dejar la caja de texto se hace hacen validaciones ║
+        //  ╚══════════════════════════════════════════════════════╝
         private void TxtContraseña_Leave(object sender, EventArgs e)
         {
             Contraseña = TxtContraseñaLogin.Text;
@@ -155,12 +166,14 @@ namespace Biblioteca_de_Peliculas
             }
         }
 
-        //╔════════════════════════════════════════════════╗
-        //║ Validar solo texto en la caja de texto Usuario ║
-        //╚════════════════════════════════════════════════╝
+        //  ╔════════════════════════════════════════════════╗
+        //  ║ Validar solo texto en la caja de texto Usuario ║
+        //  ╚════════════════════════════════════════════════╝
         private void TxtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || 
+                (e.KeyChar >= 91 && e.KeyChar <= 96) ||
+                (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("El nombre solo debe contener letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -168,17 +181,17 @@ namespace Biblioteca_de_Peliculas
             }
         }
 
-        //╔════════════════════════════════════════════════════════════╗
-        //║ Función para mandar un mensaje si la contraseña es erronea ║
-        //╚════════════════════════════════════════════════════════════╝
+        //  ╔════════════════════════════════════════════════════════════╗
+        //  ║ Función para mandar un mensaje si la contraseña es erronea ║ sin utilizar
+        //  ╚════════════════════════════════════════════════════════════╝
         private void ContraseñaIncorrecta()
         {
             MessageBox.Show("Contraseña incorrecta", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        //╔═══════════════════════════════════════════════╗
-        //║ Sí el perfil existe se despliega otra ventana ║
-        //╚═══════════════════════════════════════════════╝
+        //  ╔═══════════════════════════════════════════════╗
+        //  ║ Sí el perfil existe se despliega otra ventana ║
+        //  ╚═══════════════════════════════════════════════╝
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
             Usuario = TxtUsuarioLogin.Text;
@@ -203,13 +216,14 @@ namespace Biblioteca_de_Peliculas
             //        MessageBox.Show("Usuario y/o Contraseña incorrecta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //        break;
             //}
+
             dlgmenu.Show();
             this.Hide();
         }
 
-        //╔═══════════════════════════════════════════╗
-        //║ Muestra la contraseña de la caja de texto ║
-        //╚═══════════════════════════════════════════╝
+        //  ╔═══════════════════════════════════════════╗
+        //  ║ Muestra la contraseña de la caja de texto ║
+        //  ╚═══════════════════════════════════════════╝
         private void PtbVerContraseña_Click(object sender, EventArgs e)
         {
             TxtContraseñaLogin.UseSystemPasswordChar = false;
@@ -218,9 +232,9 @@ namespace Biblioteca_de_Peliculas
             PtbTaparContraseñaLogin.BringToFront();
         }
 
-        //╔═══════════════════════════════════════════╗
-        //║ Oculta la contraseña de la caja de texto  ║
-        //╚═══════════════════════════════════════════╝
+        //  ╔═══════════════════════════════════════════╗
+        //  ║ Oculta la contraseña de la caja de texto  ║
+        //  ╚═══════════════════════════════════════════╝
         private void PtbTaparContraseña_Click(object sender, EventArgs e)
         {
             Contraseña = TxtContraseñaLogin.Text;
