@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 namespace Biblioteca_de_Peliculas
 {
@@ -18,6 +19,7 @@ namespace Biblioteca_de_Peliculas
         //  ╚════════════════════╝
         string Usuario = "";
         string Contraseña = "";
+        bool showingPassword = false;
         DlgMenu dlgmenu = new DlgMenu();
 
         public DlgLogin()
@@ -35,7 +37,7 @@ namespace Biblioteca_de_Peliculas
         private extern static void SendMessage(System.IntPtr hwnd, int wsmg, int wparam, int lparam);
 
         //  ╔═══════════════════════════════════════╗
-        //  ║ Evento - Mover posición de la ventana ║
+        //  ║ Evento - Mover posición de la ventana ║ - implementar en varias localizaciones para evitar que el usuario no pueda mover el form
         //  ╚═══════════════════════════════════════╝
 
         private void DlgLogin_MouseDown(object sender, MouseEventArgs e)
@@ -52,6 +54,20 @@ namespace Biblioteca_de_Peliculas
             ReleaseCapure();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void PnlLoginStatusBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapure();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PtbIzquierdoLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapure();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        // Aquí se encuentrán los eventos que permiten mover al formulario ^
 
         //╔═════════════════════════╗
         //║ Evento - Cerrar ventana ║
@@ -80,9 +96,7 @@ namespace Biblioteca_de_Peliculas
         private void DlgLogin_Load(object sender, EventArgs e)
         {
             TxtUsuarioLogin.Text = "USUARIO";
-            TxtUsuarioLogin.ForeColor = Color.DimGray;
             TxtContraseñaLogin.Text = "CONTRASEÑA";
-            TxtContraseñaLogin.ForeColor = Color.DimGray;
         }
 
         //  ╔══════════════════════════════════════════════════════╗
@@ -94,7 +108,6 @@ namespace Biblioteca_de_Peliculas
             if (Usuario.Equals("USUARIO"))
             {
                 TxtUsuarioLogin.Text = "";
-                TxtUsuarioLogin.ForeColor = Color.Black;
             }
         }
 
@@ -107,8 +120,6 @@ namespace Biblioteca_de_Peliculas
             if (Contraseña.Equals("CONTRASEÑA"))
             {
                 TxtContraseñaLogin.Text = "";
-                TxtContraseñaLogin.ForeColor = Color.Black;
-                TxtContraseñaLogin.UseSystemPasswordChar = true;
             }
         }
 
@@ -121,19 +132,16 @@ namespace Biblioteca_de_Peliculas
             if (Usuario.Equals("USUARIO"))
             {
                 TxtUsuarioLogin.Text = "USUARIO";
-                TxtUsuarioLogin.ForeColor = Color.DimGray;
             }
             else
             {
                 if (Usuario.Equals(""))
                 {
                     TxtUsuarioLogin.Text = "USUARIO";
-                    TxtUsuarioLogin.ForeColor = Color.DimGray;
                 }
                 else
                 {
                     TxtUsuarioLogin.Text = Usuario;
-                    TxtUsuarioLogin.ForeColor = Color.Black;
                 }
             }
         }
@@ -147,16 +155,12 @@ namespace Biblioteca_de_Peliculas
             if (Contraseña.Equals("CONTRASEÑA"))
             {
                 TxtContraseñaLogin.Text = "CONTRASEÑA";
-                TxtContraseñaLogin.ForeColor = Color.DimGray;
-                TxtContraseñaLogin.UseSystemPasswordChar = false;
             }
             else
             {
                 if (Contraseña.Equals(""))
                 {
                     TxtContraseñaLogin.Text = "CONTRASEÑA";
-                    TxtContraseñaLogin.ForeColor = Color.DimGray;
-                    TxtContraseñaLogin.UseSystemPasswordChar = false;
                 }
                 else
                 {
@@ -220,32 +224,25 @@ namespace Biblioteca_de_Peliculas
             dlgmenu.Show();
             this.Hide();
         }
-
-        //  ╔═══════════════════════════════════════════╗
-        //  ║ Muestra la contraseña de la caja de texto ║
-        //  ╚═══════════════════════════════════════════╝
-        private void PtbVerContraseña_Click(object sender, EventArgs e)
+            
+        //  ╔════════════════════════════════════════════════════╗
+        //  ║ Muestra y oculta la contraseña de la caja de texto ║
+        //  ╚════════════════════════════════════════════════════╝
+        private void BtnShowPassword_Click(object sender, EventArgs e)
         {
-            TxtContraseñaLogin.UseSystemPasswordChar = false;
-            PtbVerContraseñaLogin.Visible = false;
-            PtbTaparContraseñaLogin.Visible = true;
-            PtbTaparContraseñaLogin.BringToFront();
+            // Obtener imagenes de forma manual
+            Image blindImg = global::Biblioteca_de_Peliculas.Properties.Resources.blind;
+            Image eyeImg = global::Biblioteca_de_Peliculas.Properties.Resources.eye;
+
+            // Negar el valor actual de la variable, por defecto en falso.
+            showingPassword = !showingPassword;
+
+            // Utilizando expresión ternaria en vez de    if      caso true                    caso falso
+            BtnShowPassword.Image = showingPassword ? blindImg : eyeImg;
+
+            // Mostrar o ocultar los caracteres de contraseña dependiendo de showingPassword
+            TxtContraseñaLogin.UseSystemPasswordChar = showingPassword;
         }
 
-        //  ╔═══════════════════════════════════════════╗
-        //  ║ Oculta la contraseña de la caja de texto  ║
-        //  ╚═══════════════════════════════════════════╝
-        private void PtbTaparContraseña_Click(object sender, EventArgs e)
-        {
-            Contraseña = TxtContraseñaLogin.Text;
-            if (!Contraseña.Equals("CONTRASEÑA"))
-            {
-                TxtContraseñaLogin.UseSystemPasswordChar = true;
-                PtbTaparContraseñaLogin.Visible = false;
-                PtbVerContraseñaLogin.Visible = true;
-                PtbVerContraseñaLogin.BringToFront();
-            }
-
-        }
     }
 }
