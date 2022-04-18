@@ -40,13 +40,14 @@ namespace Biblioteca_de_Peliculas
         //  ║ Evento - Mover posición de la ventana ║ - implementar en varias localizaciones para evitar que el usuario no pueda mover el form
         //  ╚═══════════════════════════════════════╝
 
+        // Llama al método sendMessage enviando el manejador de la ventana, y algunas constantes numéricas
+        // En resumen, visita los enlaces y trata de encontrar estos valores :u
+        // Para entender mejor esta parte visita: https://docs.microsoft.com/es-mx/windows/win32/api/winuser/nf-winuser-sendmessage?redirectedfrom=MSDN
+        // tipos de mensajes https://docs.microsoft.com/en-us/windows/win32/winmsg/about-messages-and-message-queues
+
         private void DlgLogin_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapure();
-            // Llama al método sendMessage enviando el manejador de la ventana, y algunas constantes numéricas
-            // En resumen, visita los enlaces y trata de encontrar estos valores :u
-            // Para entender mejor esta parte visita: https://docs.microsoft.com/es-mx/windows/win32/api/winuser/nf-winuser-sendmessage?redirectedfrom=MSDN
-            // tipos de mensajes https://docs.microsoft.com/en-us/windows/win32/winmsg/about-messages-and-message-queues
             SendMessage(this.Handle, 0x112, 0xf012, 0); 
         }
         private void LblTituloLogin_MouseDown(object sender, MouseEventArgs e)

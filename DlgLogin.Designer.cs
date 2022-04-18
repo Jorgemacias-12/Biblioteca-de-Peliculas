@@ -166,7 +166,6 @@
             // BtnShowPassword
             // 
             this.BtnShowPassword.FlatAppearance.BorderSize = 0;
-            this.BtnShowPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.BtnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnShowPassword.Image = global::Biblioteca_de_Peliculas.Properties.Resources.blind;
             this.BtnShowPassword.Location = new System.Drawing.Point(767, 163);

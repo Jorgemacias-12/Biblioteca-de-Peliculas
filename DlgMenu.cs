@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Biblioteca_de_Peliculas.src;
 
 namespace Biblioteca_de_Peliculas
 {
@@ -18,6 +19,12 @@ namespace Biblioteca_de_Peliculas
             InitializeComponent();
             AjustarDiseño();
         }
+
+
+        //  ╔════════════════════╗
+        //  ║ Variables globales ║
+        //  ╚════════════════════╝
+        private Utils util = new Utils();
 
         #region posicionVentana
         //╔═════════════════════════════════╗
@@ -97,7 +104,7 @@ namespace Biblioteca_de_Peliculas
         private void OcultarSubMenu()
         {
 
-            // Simplificar utilizando expresion ternaria
+            // No se puede simplificar :C
 
             if (PnlCategoriasMenu.Visible == true)
             {
@@ -201,38 +208,28 @@ namespace Biblioteca_de_Peliculas
         //╚══════════════════════════════╝
         private void BtnHerramientaColorClaroMenu_Click(object sender, EventArgs e)
         {
-            //Componentes
-            PnlFormulariosHijosMenu.BackColor = Color.FromArgb(248,230,229);
-            PnlDlgContainer.BackColor = Color.FromArgb(248, 230, 200);
+            // Sidebar
+            PnlMenuSideBar.BackColor = util.getColor("#F5F5F5");
 
-            //Bloque 1. Categorias
-            BtnCategoriasMenu.BackColor = Color.FromArgb(248, 230, 200);
-            BtnCategoriasMenu.ForeColor = Color.FromArgb(11, 7, 30);
-            //1.1 Inicio
-            BtnCategoriaInicioMenu.BackColor = Color.FromArgb(164, 0, 82);
-            BtnCategoriaInicioMenu.ForeColor = Color.White;
-            //1.2 Animadas
-            BtnCategoriaAnimadasMenu.BackColor = Color.FromArgb(164, 0, 82);
-            BtnCategoriaAnimadasMenu.ForeColor = Color.White;
-            //1.3 Comedias
-            BtnCategoriaComediasMenu.BackColor = Color.FromArgb(164, 0, 82);
-            BtnCategoriaComediasMenu.ForeColor = Color.White;
-            //1.4 Terror
-            BtnCategoriaTerrorMenu.BackColor = Color.FromArgb(164, 0, 82);
-            BtnCategoriaTerrorMenu.ForeColor = Color.White;
-            //1.5 Acción
-            BtnCategoriaAccionMenu.BackColor = Color.FromArgb(164, 0, 82);
-            BtnCategoriaAccionMenu.ForeColor = Color.White;
+            // Cambiar icono del boton para minimizar
+            BtnMinimize.Image = global::Biblioteca_de_Peliculas.Properties.Resources.minimize_black;
 
-            //Bloque 2. Configuraciones
-            BtnConfiguracionesMenu.BackColor = Color.FromArgb(248, 230, 200);
-            BtnConfiguracionesMenu.ForeColor = Color.FromArgb(11, 7, 30);
+            // Iterar en todos los hijos y modificar el foreground color a black
 
-            //Bloque 3. Ayuda
-            BtnAyudaMenu.BackColor = Color.FromArgb(248, 230, 200);
-            BtnAyudaMenu.ForeColor = Color.FromArgb(11, 7, 30);
-            BtnAcercaDeMenu.BackColor = Color.FromArgb(248, 230, 200);
-            BtnAcercaDeMenu.ForeColor = Color.FromArgb(11, 7, 30);
+            foreach (Control control in PnlMenuSideBar.Controls)
+            {
+                control.ForeColor = util.getColor("#000");
+
+                if (control is Button)
+                {
+                    control.BackColor = util.getColor("#E0E0E0");
+                }
+
+            }
+
+            // Modificar el aspecto de la barra de estado (top)
+            FlpMenuStatusBar.BackColor = util.getColor("#FFFFFF");
+            LblProgramTitle.ForeColor = util.getColor("#000");
 
             OcultarSubMenu();
         }
@@ -242,38 +239,29 @@ namespace Biblioteca_de_Peliculas
         //╚═══════════════════════════════╝
         private void BtnHerramientaColorOscuroMenu_Click(object sender, EventArgs e)
         {
-            //Componentes
-            PnlFormulariosHijosMenu.BackColor = Color.FromArgb(11, 7, 30);
-            PnlDlgContainer.BackColor = Color.FromArgb(11, 7, 19);
+            // Sidebar
+            PnlMenuSideBar.BackColor = util.getColor("#222222");
 
-            //Bloque 1. Categorias
-            BtnCategoriasMenu.BackColor = Color.FromArgb(11, 7, 19);
-            BtnCategoriasMenu.ForeColor = Color.White;
-            //1.1 Inicio
-            BtnCategoriaInicioMenu.BackColor = Color.FromArgb(164, 0, 82);
-            BtnCategoriaInicioMenu.ForeColor = Color.White;
-            //1.2 Animada
-            BtnCategoriaAnimadasMenu.BackColor = Color.FromArgb(164, 0, 82);
-            BtnCategoriaAnimadasMenu.ForeColor = Color.White;
-            //1.3 Comedia
-            BtnCategoriaComediasMenu.BackColor = Color.FromArgb(164, 0, 82);
-            BtnCategoriaComediasMenu.ForeColor = Color.White;
-            //1.4 Terror
-            BtnCategoriaTerrorMenu.BackColor = Color.FromArgb(164, 0, 82);
-            BtnCategoriaTerrorMenu.ForeColor = Color.White;
+            // Cambiar icono del boton para minimizar
+            BtnMinimize.Image = global::Biblioteca_de_Peliculas.Properties.Resources.minimize;
 
-            BtnCategoriaAccionMenu.BackColor = Color.FromArgb(164, 0, 82);
-            BtnCategoriaAccionMenu.ForeColor = Color.White;
+            // Iterar en todos los hijos y modificar el foreground color a black
 
-            //Bloque 2. Configuraciones
-            BtnConfiguracionesMenu.BackColor = Color.FromArgb(11, 7, 19);
-            BtnConfiguracionesMenu.ForeColor = Color.White;
+            foreach (Control control in PnlMenuSideBar.Controls)
+            {
+                control.ForeColor = util.getColor("#fff");
 
-            //Bloque 3. Ayuda
-            BtnAyudaMenu.BackColor = Color.FromArgb(11, 7, 19);
-            BtnAyudaMenu.ForeColor = Color.White;
-            BtnAcercaDeMenu.BackColor = Color.FromArgb(11, 7, 19);
-            BtnAcercaDeMenu.ForeColor = Color.White;
+                if (control is Button)
+                {
+                    control.BackColor = util.getColor("#3C3C3C");
+                }
+
+            }
+
+            // Modificar el aspecto de la barra de estado (top)
+            FlpMenuStatusBar.BackColor = util.getColor("#191919");
+            LblProgramTitle.ForeColor = util.getColor("#fff");
+
             OcultarSubMenu();
         }
         #endregion
