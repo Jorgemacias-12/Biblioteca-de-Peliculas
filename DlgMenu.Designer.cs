@@ -177,10 +177,11 @@
             // 
             // PtbVideoMenu
             // 
+            this.PtbVideoMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PtbVideoMenu.Image = ((System.Drawing.Image)(resources.GetObject("PtbVideoMenu.Image")));
             this.PtbVideoMenu.Location = new System.Drawing.Point(0, 0);
             this.PtbVideoMenu.Name = "PtbVideoMenu";
-            this.PtbVideoMenu.Size = new System.Drawing.Size(145, 100);
+            this.PtbVideoMenu.Size = new System.Drawing.Size(968, 668);
             this.PtbVideoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PtbVideoMenu.TabIndex = 0;
             this.PtbVideoMenu.TabStop = false;
@@ -236,6 +237,7 @@
             this.BtnCategoriaInicioMenu.Text = "Inicio";
             this.BtnCategoriaInicioMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCategoriaInicioMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriaInicioMenu.Click += new System.EventHandler(this.BtnCategoriaInicioMenu_Click);
             // 
             // PtbLogoPanelMenu
             // 
@@ -268,6 +270,7 @@
             this.BtnCategoriasMenu.Text = "Categorias";
             this.BtnCategoriasMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCategoriasMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriasMenu.Click += new System.EventHandler(this.BtnCategoriasMenu_Click);
             // 
             // PnlCategoriasMenu
             // 
@@ -303,6 +306,7 @@
             this.BtnCategoriaAccionMenu.Text = "Acción";
             this.BtnCategoriaAccionMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCategoriaAccionMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriaAccionMenu.Click += new System.EventHandler(this.BtnCategoriaAccionMenu_Click);
             // 
             // BtnCategoriaAnimadasMenu
             // 
@@ -323,6 +327,7 @@
             this.BtnCategoriaAnimadasMenu.Text = "Animadas";
             this.BtnCategoriaAnimadasMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCategoriaAnimadasMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriaAnimadasMenu.Click += new System.EventHandler(this.BtnCategoriaAnimadasMenu_Click);
             // 
             // BtnCategoriaComediasMenu
             // 
@@ -343,6 +348,7 @@
             this.BtnCategoriaComediasMenu.Text = "Comedias";
             this.BtnCategoriaComediasMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCategoriaComediasMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriaComediasMenu.Click += new System.EventHandler(this.BtnCategoriaComediasMenu_Click);
             // 
             // BtnCategoriaTerrorMenu
             // 
@@ -363,6 +369,7 @@
             this.BtnCategoriaTerrorMenu.Text = "Terror";
             this.BtnCategoriaTerrorMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCategoriaTerrorMenu.UseVisualStyleBackColor = false;
+            this.BtnCategoriaTerrorMenu.Click += new System.EventHandler(this.BtnCategoriaTerrorMenu_Click);
             // 
             // BtnConfiguracionesMenu
             // 
@@ -383,6 +390,7 @@
             this.BtnConfiguracionesMenu.Text = "Configuraciones";
             this.BtnConfiguracionesMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnConfiguracionesMenu.UseVisualStyleBackColor = false;
+            this.BtnConfiguracionesMenu.Click += new System.EventHandler(this.BtnConfiguracionesMenu_Click);
             // 
             // PnlHerramientasMenu
             // 
@@ -415,6 +423,7 @@
             this.BtnHerramientaColorOscuroMenu.Text = "Modo Oscuro";
             this.BtnHerramientaColorOscuroMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnHerramientaColorOscuroMenu.UseVisualStyleBackColor = false;
+            this.BtnHerramientaColorOscuroMenu.Click += new System.EventHandler(this.BtnHerramientaColorOscuroMenu_Click);
             // 
             // BtnAyudaMenu
             // 
@@ -435,6 +444,7 @@
             this.BtnAyudaMenu.Text = "Ayuda";
             this.BtnAyudaMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAyudaMenu.UseVisualStyleBackColor = false;
+            this.BtnAyudaMenu.Click += new System.EventHandler(this.BtnAyudaMenu_Click);
             // 
             // PnlAyudaMenu
             // 
@@ -467,6 +477,7 @@
             this.BtnAcercaDeMenu.Text = "Acerca de";
             this.BtnAcercaDeMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAcercaDeMenu.UseVisualStyleBackColor = false;
+            this.BtnAcercaDeMenu.Click += new System.EventHandler(this.BtnAcercaDeMenu_Click);
             // 
             // BtnManualMenu
             // 
@@ -487,6 +498,7 @@
             this.BtnManualMenu.Text = "Manual";
             this.BtnManualMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnManualMenu.UseVisualStyleBackColor = false;
+            this.BtnManualMenu.Click += new System.EventHandler(this.BtnManualMenu_Click);
             // 
             // DlgMenu
             // 
