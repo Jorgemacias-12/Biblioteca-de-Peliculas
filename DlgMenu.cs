@@ -32,7 +32,14 @@ namespace Biblioteca_de_Peliculas
             ReleaseCapure();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        private void PnlArribaMenu_MouseDown(object sender, MouseEventArgs e)
+
+        private void FlpMenuStatusBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapure();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PnlMenuContainer_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapure();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -41,11 +48,18 @@ namespace Biblioteca_de_Peliculas
         //╔════════════════╗
         //║ Cerrar ventana ║
         //╚════════════════╝
-        private void PtbCerrar_Click(object sender, EventArgs e)
+
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             DlgMensajeCerrarMenu dlgMensajeCerrarMenu = new DlgMensajeCerrarMenu();
             dlgMensajeCerrarMenu.Show();
         }
+
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void DlgMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -74,6 +88,9 @@ namespace Biblioteca_de_Peliculas
         //╚═══════════════════╝
         private void OcultarSubMenu()
         {
+
+            // Simplificar utilizando expresion ternaria
+
             if (PnlCategoriasMenu.Visible == true)
             {
                 PnlCategoriasMenu.Visible = false;
@@ -178,7 +195,7 @@ namespace Biblioteca_de_Peliculas
         {
             //Componentes
             PnlFormulariosHijosMenu.BackColor = Color.FromArgb(248,230,229);
-            PnlDerechoMenu.BackColor = Color.FromArgb(248, 230, 200);
+            PnlDlgContainer.BackColor = Color.FromArgb(248, 230, 200);
 
             //Bloque 1. Categorias
             BtnCategoriasMenu.BackColor = Color.FromArgb(248, 230, 200);
@@ -219,7 +236,7 @@ namespace Biblioteca_de_Peliculas
         {
             //Componentes
             PnlFormulariosHijosMenu.BackColor = Color.FromArgb(11, 7, 30);
-            PnlDerechoMenu.BackColor = Color.FromArgb(11, 7, 19);
+            PnlDlgContainer.BackColor = Color.FromArgb(11, 7, 19);
 
             //Bloque 1. Categorias
             BtnCategoriasMenu.BackColor = Color.FromArgb(11, 7, 19);
@@ -298,6 +315,11 @@ namespace Biblioteca_de_Peliculas
             PnlFormulariosHijosMenu.Tag = VentanaHijo;
             VentanaHijo.BringToFront();
             VentanaHijo.Show();
+        }
+
+        private void BtnConfiguracionesMenu_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
