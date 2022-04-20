@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,28 +14,84 @@ namespace Biblioteca_de_Peliculas.src.Categoria
     public partial class DlgCategoria : Form
     {
 
+        // Variables globales
+
+        string category;
+        int movieQuantity = 20;
+
+        public DlgCategoria()
+        {
+        }
+
         // Template para categorias
-        
         public DlgCategoria(string categoryName, string theme)
         {
             InitializeComponent();
-            initCategory(categoryName, theme);
+            initTheme(theme);
+            // Asignar la propiedad de la categoría de pelicula(s)
+            category = categoryName;
         }
 
         // Inicializa, y carga datos hacía los componentes
-        private void initCategory(string categoryName, string theme)
+        public void initTheme(string theme)
         {
-
-            if (categoryName.Equals(""))
+            switch (theme) 
             {
-                LblCategory.Text = "Fallo al inicializar texto";
+                case "light":
+                    // Manipular color de fondo del componente
+                    FlpStatusBar.BackColor = Utils.GetColor("#FFFFFF");
+
+                    // Cambiar color de letra del título de la categoría
+                    LblCategory.ForeColor = Utils.GetColor("#000");
+
+                    // Cambiar color de fondo del componente
+                    FlpMoviesContainer.BackColor = Utils.GetColor("#E0E0E0");
+
+                    break;
+
+                case "dark":
+                    // Manipular color de fondo del componente
+                    FlpStatusBar.BackColor = Utils.GetColor("");
+
+                    // Cambiar color de letra del título de la categoría
+                    LblCategory.ForeColor = Utils.GetColor("#FFF");
+
+                    // Cambiar color de fondo del componente
+                    FlpMoviesContainer.BackColor = Utils.GetColor("#353535");
+
+                    break;
             }
+        }
 
-            // Establecer el texto
-            LblCategory.Text = categoryName;
+        // Actualiza el formulario con el tema seleccionado
+        public void updateTheme(string theme)
+        {
+            switch (theme)
+            {
+                case "light":
+                    // Manipular color de fondo del componente
+                    FlpStatusBar.BackColor = Utils.GetColor("#FFFFFF");
 
-            // Cargar tema ui dependiendo del tema
+                    // Cambiar color de letra del título de la categoría
+                    LblCategory.ForeColor = Utils.GetColor("#000");
 
+                    // Cambiar color de fondo del componente
+                    FlpMoviesContainer.BackColor = Utils.GetColor("#E0E0E0");
+
+                    break;
+
+                case "dark":
+                    // Manipular color de fondo del componente
+                    FlpStatusBar.BackColor = Utils.GetColor("");
+
+                    // Cambiar color de letra del título de la categoría
+                    LblCategory.ForeColor = Utils.GetColor("#FFF");
+
+                    // Cambiar color de fondo del componente
+                    FlpMoviesContainer.BackColor = Utils.GetColor("#353535");
+
+                    break;
+            }
         }
 
         // Cerrar el componente  
@@ -44,5 +101,49 @@ namespace Biblioteca_de_Peliculas.src.Categoria
             this.Close();
         }
 
+        private async void DlgCategoria_Load(object sender, EventArgs e)
+        {
+            // Variables
+            Stopwatch time = new Stopwatch();
+            time.Start();
+
+            // Cargar caratulas de películas dependiendo de la categoría
+
+            switch(category)
+            {
+
+            }
+
+            if (category.Equals(""))
+            {
+
+                for (int i = 0; i < movieQuantity; i++)
+                {
+                    // Inicializar componente
+                    PictureBox view = new PictureBox();
+
+                    // Propidades de componente
+                    view.Size = new Size(150, 200);
+                    view.Name = $"view {i + 1}";
+                    //view.Image = Utils.getDataFromRequest(i); // Obtener imagen
+                    view.Image = await Utils.GetImageFromURL(i + 1);
+                    view.Margin = new Padding(10, 10, 10, 10);
+                    view.Anchor = AnchorStyles.None;
+                    view.Update();
+
+                    // Propiedades del contenedor
+                    FlpMoviesContainer.Controls.Add(view);
+                    FlpMoviesContainer.Update();
+                }
+            }
+            time.Stop();
+            //MessageBox.Show($"Tiempo: {time.Elapsed.TotalSeconds}");
+        }
+
+        // Inicializar componentes, y cargar caratulas, si categoría esta vaciá carga placeholder
+        private void DlgCategoria_Shown(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

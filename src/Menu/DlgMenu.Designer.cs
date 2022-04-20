@@ -144,7 +144,7 @@
             // 
             // BtnAcercaDeMenu
             // 
-            this.BtnAcercaDeMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.BtnAcercaDeMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.BtnAcercaDeMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnAcercaDeMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnAcercaDeMenu.FlatAppearance.BorderSize = 0;
@@ -165,7 +165,7 @@
             // 
             // BtnManualMenu
             // 
-            this.BtnManualMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.BtnManualMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.BtnManualMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnManualMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnManualMenu.FlatAppearance.BorderSize = 0;
@@ -186,7 +186,7 @@
             // 
             // BtnAyudaMenu
             // 
-            this.BtnAyudaMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnAyudaMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.BtnAyudaMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnAyudaMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnAyudaMenu.FlatAppearance.BorderSize = 0;
@@ -219,7 +219,7 @@
             // 
             // BtnHerramientaColorOscuroMenu
             // 
-            this.BtnHerramientaColorOscuroMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.BtnHerramientaColorOscuroMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.BtnHerramientaColorOscuroMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnHerramientaColorOscuroMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnHerramientaColorOscuroMenu.FlatAppearance.BorderSize = 0;
@@ -240,7 +240,7 @@
             // 
             // BtnHerramientaColorClaroMenu
             // 
-            this.BtnHerramientaColorClaroMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.BtnHerramientaColorClaroMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.BtnHerramientaColorClaroMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnHerramientaColorClaroMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnHerramientaColorClaroMenu.FlatAppearance.BorderSize = 0;
@@ -261,7 +261,7 @@
             // 
             // BtnConfiguracionesMenu
             // 
-            this.BtnConfiguracionesMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnConfiguracionesMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.BtnConfiguracionesMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnConfiguracionesMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnConfiguracionesMenu.FlatAppearance.BorderSize = 0;
@@ -297,7 +297,7 @@
             // 
             // BtnCategoriaTerrorMenu
             // 
-            this.BtnCategoriaTerrorMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.BtnCategoriaTerrorMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.BtnCategoriaTerrorMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCategoriaTerrorMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnCategoriaTerrorMenu.FlatAppearance.BorderSize = 0;
@@ -318,7 +318,7 @@
             // 
             // BtnCategoriaComediasMenu
             // 
-            this.BtnCategoriaComediasMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.BtnCategoriaComediasMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.BtnCategoriaComediasMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCategoriaComediasMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnCategoriaComediasMenu.FlatAppearance.BorderSize = 0;
@@ -339,7 +339,7 @@
             // 
             // BtnCategoriaAnimadasMenu
             // 
-            this.BtnCategoriaAnimadasMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.BtnCategoriaAnimadasMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.BtnCategoriaAnimadasMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCategoriaAnimadasMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnCategoriaAnimadasMenu.FlatAppearance.BorderSize = 0;
@@ -360,7 +360,7 @@
             // 
             // BtnCategoriaAccionMenu
             // 
-            this.BtnCategoriaAccionMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.BtnCategoriaAccionMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.BtnCategoriaAccionMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCategoriaAccionMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnCategoriaAccionMenu.FlatAppearance.BorderSize = 0;
@@ -381,7 +381,7 @@
             // 
             // BtnCategoriaInicioMenu
             // 
-            this.BtnCategoriaInicioMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.BtnCategoriaInicioMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.BtnCategoriaInicioMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCategoriaInicioMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnCategoriaInicioMenu.FlatAppearance.BorderSize = 0;
@@ -402,7 +402,7 @@
             // 
             // BtnCategoriasMenu
             // 
-            this.BtnCategoriasMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnCategoriasMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.BtnCategoriasMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCategoriasMenu.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.BtnCategoriasMenu.FlatAppearance.BorderSize = 0;

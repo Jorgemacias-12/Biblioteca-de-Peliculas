@@ -51,9 +51,12 @@
             // 
             // FlpMoviesContainer
             // 
+            this.FlpMoviesContainer.AutoScroll = true;
             this.FlpMoviesContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FlpMoviesContainer.Location = new System.Drawing.Point(0, 32);
+            this.FlpMoviesContainer.Margin = new System.Windows.Forms.Padding(0);
             this.FlpMoviesContainer.Name = "FlpMoviesContainer";
+            this.FlpMoviesContainer.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.FlpMoviesContainer.Size = new System.Drawing.Size(968, 636);
             this.FlpMoviesContainer.TabIndex = 1;
             // 
@@ -102,9 +105,11 @@
             this.ClientSize = new System.Drawing.Size(968, 668);
             this.ControlBox = false;
             this.Controls.Add(this.PnlCategoryContainer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DlgCategoria";
+            this.Load += new System.EventHandler(this.DlgCategoria_Load);
+            this.Shown += new System.EventHandler(this.DlgCategoria_Shown);
             this.PnlCategoryContainer.ResumeLayout(false);
             this.FlpStatusBar.ResumeLayout(false);
             this.ResumeLayout(false);

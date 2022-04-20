@@ -26,6 +26,8 @@ namespace Biblioteca_de_Peliculas
         //  ║ Variables globales ║
         //  ╚════════════════════╝
         private Utils util = new Utils();
+        private DlgCategoria categoria;
+
 
         #region posicionVentana
         //╔═════════════════════════════════╗
@@ -185,21 +187,21 @@ namespace Biblioteca_de_Peliculas
             OcultarSubMenu();
         }
 
-        //╔════════════════════════╗
-        //║ Categoria de Terror    ║
-        //╚════════════════════════╝
+        //  ╔════════════════════════╗
+        //  ║ Categoria de Terror    ║
+        //  ╚════════════════════════╝
         private void BtnCategoriaTerrorMenu_Click(object sender, EventArgs e)
         {
-            DlgCategoria terror = new DlgCategoria("Películas de terror", "dark");
-            AbrirDgvHijo(terror);
+            categoria = new DlgCategoria("", "dark");
+            AbrirDgvHijo(categoria);
             OcultarSubMenu();
         }
         #endregion
 
         #region ConfiguracionesMenu
-        //╔════════════════════════╗
-        //║ Abrir configuraciones  ║
-        //╚════════════════════════╝
+        //  ╔════════════════════════╗
+        //  ║ Abrir configuraciones  ║
+        //  ╚════════════════════════╝
         private void BtnConfiguracionesMenu_Click(object sender, EventArgs e)
         {
             MostrarSubMenu(PnlHerramientasMenu);
@@ -211,27 +213,23 @@ namespace Biblioteca_de_Peliculas
         private void BtnHerramientaColorClaroMenu_Click(object sender, EventArgs e)
         {
             // Sidebar
-            PnlMenuSideBar.BackColor = util.getColor("#E0E0E0");
+            Utils.StyleUIComponent(PnlMenuSideBar, "#F5F5F5", "");
 
             // Cambiar icono del boton para minimizar
             BtnMinimize.Image = global::Biblioteca_de_Peliculas.Properties.Resources.minimize_black;
 
             // Iterar en todos los hijos y modificar el foreground color a black
-
-            foreach (Control control in PnlMenuSideBar.Controls)
-            {
-                control.ForeColor = util.getColor("#000");
-
-                if (control is Button)
-                {
-                    control.BackColor = util.getColor("#C5C5C5");
-                }
-
-            }
+            Utils.StyleUIComponents(PnlMenuSideBar.Controls, "#F5F5F5", "#000");
+            Utils.StyleUIComponents(PnlCategoriasMenu.Controls, "#E0E0E0", "#000");
+            Utils.StyleUIComponents(PnlHerramientasMenu.Controls, "#E0E0E0", "#000");
+            Utils.StyleUIComponents(PnlAyudaMenu.Controls, "#E0E0E0", "#000");
 
             // Modificar el aspecto de la barra de estado (top)
-            FlpMenuStatusBar.BackColor = util.getColor("#FFFFFF");
-            LblProgramTitle.ForeColor = util.getColor("#000");
+            Utils.StyleUIComponent(FlpMenuStatusBar, "#FFF", "");
+            Utils.StyleUIComponent(LblProgramTitle, "#FFF", "#000");
+
+            // Actualizar tema de la sección de categoría
+            if (categoria != null) categoria.updateTheme("light");
 
             OcultarSubMenu();
         }
@@ -242,27 +240,26 @@ namespace Biblioteca_de_Peliculas
         private void BtnHerramientaColorOscuroMenu_Click(object sender, EventArgs e)
         {
             // Sidebar
-            PnlMenuSideBar.BackColor = util.getColor("#222222");
+            Utils.StyleUIComponent(PnlMenuSideBar, "#222222", "");
+            // PnlMenuSideBar.BackColor = Utils.GetColor("#222222");
 
             // Cambiar icono del boton para minimizar
             BtnMinimize.Image = global::Biblioteca_de_Peliculas.Properties.Resources.minimize;
 
             // Iterar en todos los hijos y modificar el foreground color a black
 
-            foreach (Control control in PnlMenuSideBar.Controls)
-            {
-                control.ForeColor = util.getColor("#fff");
+            Utils.StyleUIComponents(PnlMenuSideBar.Controls,"#222222","#FFFFFF");
+            Utils.StyleUIComponents(PnlCategoriasMenu.Controls, "#3C3C3C", "#FFFFFF");
+            Utils.StyleUIComponents(PnlHerramientasMenu.Controls, "#3C3C3C", "#FFFFFF");
+            Utils.StyleUIComponents(PnlAyudaMenu.Controls, "#3C3C3C", "#FFFFFF");
 
-                if (control is Button)
-                {
-                    control.BackColor = util.getColor("#3C3C3C");
-                }
-
-            }
 
             // Modificar el aspecto de la barra de estado (top)
-            FlpMenuStatusBar.BackColor = util.getColor("#191919");
-            LblProgramTitle.ForeColor = util.getColor("#fff");
+            Utils.StyleUIComponent(FlpMenuStatusBar, "#191919", "");
+            Utils.StyleUIComponent(LblProgramTitle, "#191919", "#FFF");
+
+            // Actualizar tema de la seccion de categoría
+            if (categoria != null) categoria.updateTheme("dark");
 
             OcultarSubMenu();
         }
@@ -307,7 +304,7 @@ namespace Biblioteca_de_Peliculas
             }
             VentanaActiva = VentanaHijo;
             VentanaHijo.TopLevel = false;
-            VentanaHijo.FormBorderStyle = FormBorderStyle.None;
+            // VentanaHijo.FormBorderStyle = FormBorderStyle.None;
             VentanaHijo.Dock = DockStyle.Fill;
             PnlFormulariosHijosMenu.Controls.Add(VentanaHijo);
             PnlFormulariosHijosMenu.Tag = VentanaHijo;
