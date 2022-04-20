@@ -39,6 +39,11 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,52 +55,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DlgAcercaDe.cs">
+    <Compile Include="src\Menu\Menus\DlgAcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgAcercaDe.Designer.cs">
+    <Compile Include="src\Menu\Menus\DlgAcercaDe.Designer.cs">
       <DependentUpon>DlgAcercaDe.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgAnimadas.cs">
+    <Compile Include="src\Categorias\DlgAnimadas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgAnimadas.Designer.cs">
+    <Compile Include="src\Categorias\DlgAnimadas.Designer.cs">
       <DependentUpon>DlgAnimadas.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgCategoriaAccion.cs">
+    <Compile Include="src\Categorias\DlgCategoriaAccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgCategoriaAccion.Designer.cs">
+    <Compile Include="src\Categorias\DlgCategoriaAccion.Designer.cs">
       <DependentUpon>DlgCategoriaAccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgComedias.cs">
+    <Compile Include="src\Categorias\DlgComedias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgComedias.Designer.cs">
+    <Compile Include="src\Categorias\DlgComedias.Designer.cs">
       <DependentUpon>DlgComedias.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgLogin.cs">
+    <Compile Include="src\Login\DlgLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgLogin.Designer.cs">
+    <Compile Include="src\Login\DlgLogin.Designer.cs">
       <DependentUpon>DlgLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgManual.cs">
+    <Compile Include="src\Menu\Menus\DlgManual.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgManual.Designer.cs">
+    <Compile Include="src\Menu\Menus\DlgManual.Designer.cs">
       <DependentUpon>DlgManual.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgMensajeCerrarMenu.cs">
+    <Compile Include="src\Menu\Menus\DlgMensajeCerrarMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgMensajeCerrarMenu.Designer.cs">
+    <Compile Include="src\Menu\Menus\DlgMensajeCerrarMenu.Designer.cs">
       <DependentUpon>DlgMensajeCerrarMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgMenu.cs">
+    <Compile Include="src\Menu\DlgMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgMenu.Designer.cs">
+    <Compile Include="src\Menu\DlgMenu.Designer.cs">
       <DependentUpon>DlgMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="DlgReproductor.cs">
@@ -104,58 +109,67 @@
     <Compile Include="DlgReproductor.Designer.cs">
       <DependentUpon>DlgReproductor.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgCategoriaInicio.cs">
+    <Compile Include="src\Categorias\DlgCategoriaInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgCategoriaInicio.Designer.cs">
+    <Compile Include="src\Categorias\DlgCategoriaInicio.Designer.cs">
       <DependentUpon>DlgCategoriaInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgTerror.cs">
+    <Compile Include="src\Categorias\DlgTerror.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgTerror.Designer.cs">
+    <Compile Include="src\Categorias\DlgTerror.Designer.cs">
       <DependentUpon>DlgTerror.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Utils.cs" />
-    <EmbeddedResource Include="DlgAcercaDe.resx">
+    <Compile Include="src\Categoria\DlgCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Categoria\DlgCategoria.Designer.cs">
+      <DependentUpon>DlgCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Utils\Utils.cs" />
+    <EmbeddedResource Include="src\Menu\Menus\DlgAcercaDe.resx">
       <DependentUpon>DlgAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgAnimadas.resx">
+    <EmbeddedResource Include="src\Categorias\DlgAnimadas.resx">
       <DependentUpon>DlgAnimadas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgCategoriaAccion.resx">
+    <EmbeddedResource Include="src\Categorias\DlgCategoriaAccion.resx">
       <DependentUpon>DlgCategoriaAccion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgCategoriaInicio.resx">
+    <EmbeddedResource Include="src\Categorias\DlgCategoriaInicio.resx">
       <DependentUpon>DlgCategoriaInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgComedias.resx">
+    <EmbeddedResource Include="src\Categorias\DlgComedias.resx">
       <DependentUpon>DlgComedias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgLogin.resx">
+    <EmbeddedResource Include="src\Login\DlgLogin.resx">
       <DependentUpon>DlgLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgManual.resx">
+    <EmbeddedResource Include="src\Menu\Menus\DlgManual.resx">
       <DependentUpon>DlgManual.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgMensajeCerrarMenu.resx">
+    <EmbeddedResource Include="src\Menu\Menus\DlgMensajeCerrarMenu.resx">
       <DependentUpon>DlgMensajeCerrarMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgMenu.resx">
+    <EmbeddedResource Include="src\Menu\DlgMenu.resx">
       <DependentUpon>DlgMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DlgReproductor.resx">
       <DependentUpon>DlgReproductor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgTerror.resx">
+    <EmbeddedResource Include="src\Categorias\DlgTerror.resx">
       <DependentUpon>DlgTerror.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Categoria\DlgCategoria.resx">
+      <DependentUpon>DlgCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -245,6 +259,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\resources\Dialog\minimize-black.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="src\resources\Dialog\minimize_black.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
