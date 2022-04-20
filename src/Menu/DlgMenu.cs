@@ -15,19 +15,23 @@ namespace Biblioteca_de_Peliculas
 {
     public partial class DlgMenu : Form
     {
-        public DlgMenu()
-        {
-            InitializeComponent();
-            AjustarDiseño();
-        }
-
 
         //  ╔════════════════════╗
         //  ║ Variables globales ║
         //  ╚════════════════════╝
-        private Utils util = new Utils();
         private DlgCategoria categoria;
+        public IntPtr VisibleHandle;
+        public string actualTheme;
 
+        //  ╔═══════════════╗
+        //  ║  Constructor  ║
+        //  ╚═══════════════╝
+        public DlgMenu()
+        {
+            InitializeComponent();
+            VisibleHandle = this.Handle;
+            AjustarDiseño();
+        }
 
         #region posicionVentana
         //╔═════════════════════════════════╗
@@ -192,7 +196,7 @@ namespace Biblioteca_de_Peliculas
         //  ╚════════════════════════╝
         private void BtnCategoriaTerrorMenu_Click(object sender, EventArgs e)
         {
-            categoria = new DlgCategoria("", "dark");
+            categoria = new DlgCategoria("", actualTheme);
             AbrirDgvHijo(categoria);
             OcultarSubMenu();
         }
@@ -212,6 +216,9 @@ namespace Biblioteca_de_Peliculas
         //╚══════════════════════════════╝
         private void BtnHerramientaColorClaroMenu_Click(object sender, EventArgs e)
         {
+            // Establecer tema actual
+            actualTheme = "light";
+
             // Sidebar
             Utils.StyleUIComponent(PnlMenuSideBar, "#F5F5F5", "");
 
@@ -239,6 +246,9 @@ namespace Biblioteca_de_Peliculas
         //╚═══════════════════════════════╝
         private void BtnHerramientaColorOscuroMenu_Click(object sender, EventArgs e)
         {
+            // Establecer tema actual
+            actualTheme = "dark";
+
             // Sidebar
             Utils.StyleUIComponent(PnlMenuSideBar, "#222222", "");
             // PnlMenuSideBar.BackColor = Utils.GetColor("#222222");

@@ -15,13 +15,8 @@ namespace Biblioteca_de_Peliculas.src.Categoria
     {
 
         // Variables globales
-
         string category;
         int movieQuantity = 20;
-
-        public DlgCategoria()
-        {
-        }
 
         // Template para categorias
         public DlgCategoria(string categoryName, string theme)
@@ -31,6 +26,10 @@ namespace Biblioteca_de_Peliculas.src.Categoria
             // Asignar la propiedad de la categoría de pelicula(s)
             category = categoryName;
         }
+
+        #region Mover Ventana Padre
+
+        #endregion
 
         // Inicializa, y carga datos hacía los componentes
         public void initTheme(string theme)
@@ -101,6 +100,7 @@ namespace Biblioteca_de_Peliculas.src.Categoria
             this.Close();
         }
 
+        // Inicializar componentes, y cargar caratulas, si categoría esta vaciá carga placeholder
         private async void DlgCategoria_Load(object sender, EventArgs e)
         {
             // Variables
@@ -125,7 +125,6 @@ namespace Biblioteca_de_Peliculas.src.Categoria
                     // Propidades de componente
                     view.Size = new Size(150, 200);
                     view.Name = $"view {i + 1}";
-                    //view.Image = Utils.getDataFromRequest(i); // Obtener imagen
                     view.Image = await Utils.GetImageFromURL(i + 1);
                     view.Margin = new Padding(10, 10, 10, 10);
                     view.Anchor = AnchorStyles.None;
@@ -138,12 +137,6 @@ namespace Biblioteca_de_Peliculas.src.Categoria
             }
             time.Stop();
             //MessageBox.Show($"Tiempo: {time.Elapsed.TotalSeconds}");
-        }
-
-        // Inicializar componentes, y cargar caratulas, si categoría esta vaciá carga placeholder
-        private void DlgCategoria_Shown(object sender, EventArgs e)
-        {
-            
         }
     }
 }

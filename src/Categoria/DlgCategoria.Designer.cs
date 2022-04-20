@@ -109,7 +109,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DlgCategoria";
             this.Load += new System.EventHandler(this.DlgCategoria_Load);
-            this.Shown += new System.EventHandler(this.DlgCategoria_Shown);
             this.PnlCategoryContainer.ResumeLayout(false);
             this.FlpStatusBar.ResumeLayout(false);
             this.ResumeLayout(false);
