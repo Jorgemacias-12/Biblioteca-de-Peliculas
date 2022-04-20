@@ -22,6 +22,7 @@ namespace Biblioteca_de_Peliculas
         private DlgCategoria categoria;
         public IntPtr VisibleHandle;
         public string actualTheme;
+        private Form VentanaActiva = null;
 
         //  ╔═══════════════╗
         //  ║  Constructor  ║
@@ -88,7 +89,7 @@ namespace Biblioteca_de_Peliculas
         //  ╚═══════════════════╝
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         
@@ -102,7 +103,6 @@ namespace Biblioteca_de_Peliculas
             PnlCategoriasMenu.Visible = false;
             PnlHerramientasMenu.Visible = false;
             PnlAyudaMenu.Visible = false;
-
         }
 
         //  ╔═══════════════════╗
@@ -305,7 +305,7 @@ namespace Biblioteca_de_Peliculas
         }
         #endregion
 
-        private Form VentanaActiva = null;
+        
         private void AbrirDgvHijo(Form VentanaHijo)
         {
             if (VentanaActiva != null)
