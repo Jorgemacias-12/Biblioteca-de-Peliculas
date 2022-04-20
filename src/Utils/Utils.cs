@@ -49,33 +49,38 @@ namespace Biblioteca_de_Peliculas.src
         }
 
         // Obtener datos desde api para hablar de placeholder
-        public static async Task<Image> GetImageFromURL(int imageNumber)
+
+        public static async Task<Image> GetImageFromUrl(int imageNumber)
         {
             // Variables
-            string apiURL;
+            string url = $"https://via.placeholder.com/150x200.png?text={imageNumber}";
+            TaskCompletionSource<Image> Tsc = new TaskCompletionSource<Image>();
             HttpWebRequest request;
             HttpWebResponse response;
-            Stream imageStream;
-            Image tempImg;
+            Stream stream;
+            Image image;
 
             // Asignación de valores
-            apiURL = $"https://via.placeholder.com/150x200.png?text=Movie+{imageNumber}";
-            request = (HttpWebRequest) WebRequest.Create(apiURL);
-            
-            // Opciones de request
+            request = (HttpWebRequest) WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip;
 
-            // Recibir la respuesta y meterla en un stream
-            response = (HttpWebResponse) request.GetResponse();
-            imageStream = response.GetResponseStream();
+            // Convertir la respuesta en async
+            await Task.Factory.FromAsync<WebResponse>(request.BeginGetResponse, request.EndGetResponse, null)
+                .ContinueWith( task =>
+                {
+                    response = (HttpWebResponse)task.Result;
+                    stream = response.GetResponseStream();
+                    image = Image.FromStream(stream);
 
-            // Retornar imagen
+                    Tsc.TrySetResult(image);
+                    response.Close();
+                    stream.Close();
 
-            tempImg = (Image) Bitmap.FromStream(imageStream);
-
-            return  tempImg;
-
+                });
+            return Tsc.Task.Result;
         }
+
+
 
         public static void StyleUIComponents(ControlCollection controls, string bgColorHex, string fgColorHex)
         {

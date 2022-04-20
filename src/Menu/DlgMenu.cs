@@ -314,7 +314,7 @@ namespace Biblioteca_de_Peliculas
             }
             VentanaActiva = VentanaHijo;
             VentanaHijo.TopLevel = false;
-            // VentanaHijo.FormBorderStyle = FormBorderStyle.None;
+            VentanaHijo.FormBorderStyle = FormBorderStyle.None;
             VentanaHijo.Dock = DockStyle.Fill;
             PnlFormulariosHijosMenu.Controls.Add(VentanaHijo);
             PnlFormulariosHijosMenu.Tag = VentanaHijo;
