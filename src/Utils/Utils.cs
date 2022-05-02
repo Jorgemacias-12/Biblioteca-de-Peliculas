@@ -53,7 +53,7 @@ namespace Biblioteca_de_Peliculas.src
         public static async Task<Image> GetImageFromUrl(int imageNumber)
         {
             // Variables
-            string url = $"https://via.placeholder.com/150x200.png?text={imageNumber}";
+            string url = $"https://via.placeholder.com/150x200.png/F5F5F5/000?text={imageNumber}";
             TaskCompletionSource<Image> Tsc = new TaskCompletionSource<Image>();
             HttpWebRequest request;
             HttpWebResponse response;
@@ -80,7 +80,10 @@ namespace Biblioteca_de_Peliculas.src
             return Tsc.Task.Result;
         }
 
-
+        public static async Task<Image> GetMovieImage(string category)
+        {
+            return null;
+        }
 
         public static void StyleUIComponents(ControlCollection controls, string bgColorHex, string fgColorHex)
         {
@@ -114,6 +117,83 @@ namespace Biblioteca_de_Peliculas.src
 
         }
 
+        public static void PaintBorder(object sender, EventArgs e)
+        {
+
+            // Propiedades del borde
+            Color BorderColor = GetColor("#2667FF");
+            int BorderSize = 4;
+            ButtonBorderStyle BorderStyle = ButtonBorderStyle.Solid;
+
+            // Obtener componente
+            PictureBox component = sender as PictureBox;
+            // Crear un rectángulo
+            Rectangle componentRec = new Rectangle(new Point(0, 0), component.Size);
+            // Dibujar el borde con los gráficos
+            ControlPaint.DrawBorder(component.CreateGraphics(),
+                                    componentRec,
+                                    BorderColor,
+                                    BorderSize,
+                                    BorderStyle,
+                                    BorderColor,
+                                    BorderSize,
+                                    BorderStyle,
+                                    BorderColor,
+                                    BorderSize,
+                                    BorderStyle,
+                                    BorderColor,
+                                    BorderSize,
+                                    BorderStyle);
+        }
+
+        private static void RemoveBorder(object sender, EventArgs e)
+        {
+            PictureBox component = sender as PictureBox;
+            Rectangle componentRec = new Rectangle(new Point(0, 0), component.Size);
+            ControlPaint.DrawBorder(component.CreateGraphics(), componentRec, GetColor("#fff"), ButtonBorderStyle.None);
+            component.Refresh();
+        }
+
+        public static async void GenerateMoviePreview(int QuantityOfView, 
+                                                      FlowLayoutPanel Container,
+                                                      EventHandler GoToMovie, 
+                                                      bool IsCategoryNull, 
+                                                      string movieCategory)
+        {
+            // Inicializar componentes
+            PictureBox pictureBox;
+
+            pictureBox = null;
+
+            // Generar la caratula de imagenes 
+            for (int i = 0; i < QuantityOfView; i++)
+            {
+                // Inicializar componentes
+                pictureBox = new PictureBox();
+
+                // Propiedades del componente
+                pictureBox.Size = new Size(150, 200);
+                pictureBox.Name = $"view {i + 1}";
+                pictureBox.Image = IsCategoryNull ? await GetImageFromUrl(i + 1) : await GetMovieImage(movieCategory);
+                pictureBox.Margin = new Padding(10, 10, 10, 10);
+                pictureBox.Anchor = AnchorStyles.None;
+                pictureBox.Click += GoToMovie;
+                pictureBox.MouseEnter += PaintBorder;
+                pictureBox.MouseLeave += RemoveBorder;
+                pictureBox.Cursor = Cursors.Hand;
+                pictureBox.Update();
+
+                // Añadir al contenedor los componentes
+                Container.Controls.Add(pictureBox);
+                Container.Update();
+
+            }
+        }
+
+        public static void ErrorDialog(string text, string title)
+        {
+            MessageBox.Show(text, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
 
     }
 }

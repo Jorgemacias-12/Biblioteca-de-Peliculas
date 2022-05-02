@@ -122,6 +122,7 @@
             this.MtbVolume.TrackLineHeight = 3;
             this.MtbVolume.TrackLineSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.MtbVolume.Value = 50;
+            this.MtbVolume.ValueChanged += new XComponent.SliderBar.ValueChangedHandler(this.MtbVolume_ValueChanged);
             // 
             // LblVolumeIndicator
             // 
@@ -184,6 +185,7 @@
             this.BtnNext.Size = new System.Drawing.Size(32, 51);
             this.BtnNext.TabIndex = 19;
             this.BtnNext.UseVisualStyleBackColor = true;
+            this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // BtnStart
             // 
@@ -278,6 +280,7 @@
             this.MtbTimeLine.TrackLineHeight = 5;
             this.MtbTimeLine.TrackLineSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.MtbTimeLine.Value = 0;
+            this.MtbTimeLine.ValueChanged += new XComponent.SliderBar.ValueChangedHandler(this.MtbTimeLine_ValueChanged);
             // 
             // wmpPlayer
             // 
@@ -317,7 +320,7 @@
             this.abrirArchivoToolStripMenuItem.Name = "abrirArchivoToolStripMenuItem";
             this.abrirArchivoToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.abrirArchivoToolStripMenuItem.Text = "Abrir archivo";
-            this.abrirArchivoToolStripMenuItem.Click += new System.EventHandler(this.abrirArchivoToolStripMenuItem_Click);
+            this.abrirArchivoToolStripMenuItem.Click += new System.EventHandler(this.AbrirArchivoToolStripMenuItem_Click);
             // 
             // abrirCarpetaToolStripMenuItem
             // 

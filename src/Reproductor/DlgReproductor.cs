@@ -23,7 +23,8 @@ namespace Biblioteca_de_Peliculas.src.Reproductor
         FolderBrowserDialog FolderBrowser;
         DialogResult DResult;
         string SelectedPath;
-        List<string> Files;
+        string[] Files;
+        int VideoIndex;
         #endregion
 
         public DlgReproductor(string theme)
@@ -71,12 +72,21 @@ namespace Biblioteca_de_Peliculas.src.Reproductor
 
         private void BtnTimeIncrease_Click(object sender, EventArgs e)
         {
-
+            if (Files == null) return;
         }
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
 
+            if (Files == null) return;
+
+            if (VideoIndex < Files.Length - 1)
+            {
+                wmpPlayer.Ctlcontrols.pause();
+                VideoIndex++;
+                wmpPlayer.URL = Files[VideoIndex];
+            }
+            wmpPlayer.Ctlcontrols.play();
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
@@ -92,21 +102,77 @@ namespace Biblioteca_de_Peliculas.src.Reproductor
             // Cambiar imagen dependiendo del estado
             BtnStart.Image = IsPlaying ? Resume : Pause;
 
+            if (IsPlaying)
+            {
+                wmpPlayer.Ctlcontrols.pause();
+                Counter.Stop();
+            }
+
+            if (!IsPlaying)
+            {
+                wmpPlayer.Ctlcontrols.play();
+                Counter.Start();
+            }
+
+
         }
 
         private void BtnPrevious_Click(object sender, EventArgs e)
         {
-
+            // Verificar si VideoIndex es mayor a -1
+            if (VideoIndex > -1 &&
+                Files != null)
+            {
+                wmpPlayer.Ctlcontrols.pause();
+                VideoIndex--;
+                wmpPlayer.URL = Files[VideoIndex];
+                wmpPlayer.Ctlcontrols.play();
+            }
         }
 
         private void BtnTimeDecrease_Click(object sender, EventArgs e)
         {
+
+            if (Files == null) return;
+
+            int DecreasedTime;
+
+            DecreasedTime = MtbTimeLine.Value -= 15;
+
+            if (DecreasedTime < 0)
+            {
+                MtbTimeLine.Value = 0;
+            }
+
+        }
+
+        private void MtbTimeLine_ValueChanged(object sender, decimal value)
+        {
+            MtbTimeLine.Maximum = (int)wmpPlayer.currentMedia.duration;
+
+            if (MtbTimeLine.Value == wmpPlayer.Ctlcontrols.currentPosition)
+            {
+                // Aparentemente si no incluyo esto
+                // Se empieza a buguear todo :C ha 
+                // Olvidalo sigue fallando .I.
+            }
+            else
+            {
+                wmpPlayer.Ctlcontrols.currentPosition = MtbTimeLine.Value;
+            }
 
         }
 
         #endregion
 
         #region Audio Controls
+
+        private void MtbVolume_ValueChanged(object sender, decimal value)
+        {
+            wmpPlayer.settings.volume = MtbVolume.Value;
+            LblVolumeIndicator.Text = wmpPlayer.settings.volume.ToString();
+        }
+
         #endregion
         private void BtnAudio_Click(object sender, EventArgs e)
         {
@@ -119,10 +185,17 @@ namespace Biblioteca_de_Peliculas.src.Reproductor
 
             // Cambiar imagen dependiendo del estado 
             BtnAudio.Image = IsMuted ? Audio : No_Audio;
+
+            // Silenciar el volumen del reproductor
+            MtbVolume.Value = IsMuted ?  0 : 50;
+        
         }
 
         private void Counter_Tick(object sender, EventArgs e)
         {
+
+            if (Files == null) return;
+
             try
             {
                 MtbTimeLine.Value = (int)wmpPlayer.Ctlcontrols.currentPosition;
@@ -156,11 +229,18 @@ namespace Biblioteca_de_Peliculas.src.Reproductor
             if (DResult == DialogResult.OK)
             {
                 SelectedPath = FolderBrowser.SelectedPath;
-                MessageBox.Show($"{Directory.GetFiles(SelectedPath)}");
+                Files = Directory.GetFiles(SelectedPath);
+                //foreach(string file in Files)
+                //{
+                    //MessageBox.Show(file);
+                //}
             }
+            VideoIndex = 0;
+            wmpPlayer.URL = Files[VideoIndex];
+            Counter.Start();
         }
 
-        private void abrirArchivoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AbrirArchivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -180,5 +260,6 @@ namespace Biblioteca_de_Peliculas.src.Reproductor
             }
 
         }
+
     }
 }
