@@ -236,7 +236,7 @@ namespace Biblioteca_de_Peliculas
             Utils.StyleUIComponent(LblProgramTitle, "#FFF", "#000");
 
             // Actualizar tema de la sección de categoría
-            if (categoria != null) categoria.updateTheme("light");
+            if (categoria != null) categoria.UpdateTheme("light");
 
             OcultarSubMenu();
         }
@@ -269,7 +269,7 @@ namespace Biblioteca_de_Peliculas
             Utils.StyleUIComponent(LblProgramTitle, "#191919", "#FFF");
 
             // Actualizar tema de la seccion de categoría
-            if (categoria != null) categoria.updateTheme("dark");
+            if (categoria != null) categoria.UpdateTheme("dark");
 
             OcultarSubMenu();
         }

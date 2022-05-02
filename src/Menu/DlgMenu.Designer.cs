@@ -155,7 +155,7 @@
             this.BtnAcercaDeMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAcercaDeMenu.Location = new System.Drawing.Point(0, 45);
             this.BtnAcercaDeMenu.Name = "BtnAcercaDeMenu";
-            this.BtnAcercaDeMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnAcercaDeMenu.Padding = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.BtnAcercaDeMenu.Size = new System.Drawing.Size(271, 45);
             this.BtnAcercaDeMenu.TabIndex = 32;
             this.BtnAcercaDeMenu.Text = "Acerca de";
@@ -176,7 +176,7 @@
             this.BtnManualMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnManualMenu.Location = new System.Drawing.Point(0, 0);
             this.BtnManualMenu.Name = "BtnManualMenu";
-            this.BtnManualMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnManualMenu.Padding = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.BtnManualMenu.Size = new System.Drawing.Size(271, 45);
             this.BtnManualMenu.TabIndex = 31;
             this.BtnManualMenu.Text = "Manual";
@@ -197,7 +197,7 @@
             this.BtnAyudaMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAyudaMenu.Location = new System.Drawing.Point(0, 465);
             this.BtnAyudaMenu.Name = "BtnAyudaMenu";
-            this.BtnAyudaMenu.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
+            this.BtnAyudaMenu.Padding = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.BtnAyudaMenu.Size = new System.Drawing.Size(271, 50);
             this.BtnAyudaMenu.TabIndex = 35;
             this.BtnAyudaMenu.Text = "Ayuda";
@@ -230,7 +230,7 @@
             this.BtnHerramientaColorOscuroMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnHerramientaColorOscuroMenu.Location = new System.Drawing.Point(0, 45);
             this.BtnHerramientaColorOscuroMenu.Name = "BtnHerramientaColorOscuroMenu";
-            this.BtnHerramientaColorOscuroMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnHerramientaColorOscuroMenu.Padding = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.BtnHerramientaColorOscuroMenu.Size = new System.Drawing.Size(271, 45);
             this.BtnHerramientaColorOscuroMenu.TabIndex = 28;
             this.BtnHerramientaColorOscuroMenu.Text = "Modo Oscuro";
@@ -251,7 +251,7 @@
             this.BtnHerramientaColorClaroMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnHerramientaColorClaroMenu.Location = new System.Drawing.Point(0, 0);
             this.BtnHerramientaColorClaroMenu.Name = "BtnHerramientaColorClaroMenu";
-            this.BtnHerramientaColorClaroMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnHerramientaColorClaroMenu.Padding = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.BtnHerramientaColorClaroMenu.Size = new System.Drawing.Size(271, 45);
             this.BtnHerramientaColorClaroMenu.TabIndex = 26;
             this.BtnHerramientaColorClaroMenu.Text = "Modo Claro";
@@ -272,7 +272,7 @@
             this.BtnConfiguracionesMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnConfiguracionesMenu.Location = new System.Drawing.Point(0, 325);
             this.BtnConfiguracionesMenu.Name = "BtnConfiguracionesMenu";
-            this.BtnConfiguracionesMenu.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.BtnConfiguracionesMenu.Padding = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.BtnConfiguracionesMenu.Size = new System.Drawing.Size(271, 50);
             this.BtnConfiguracionesMenu.TabIndex = 33;
             this.BtnConfiguracionesMenu.Text = "Configuraciones";
@@ -307,8 +307,9 @@
             this.BtnCategoriaTerrorMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaTerrorMenu.Image")));
             this.BtnCategoriaTerrorMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCategoriaTerrorMenu.Location = new System.Drawing.Point(0, 180);
+            this.BtnCategoriaTerrorMenu.Margin = new System.Windows.Forms.Padding(10, 3, 35, 3);
             this.BtnCategoriaTerrorMenu.Name = "BtnCategoriaTerrorMenu";
-            this.BtnCategoriaTerrorMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriaTerrorMenu.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnCategoriaTerrorMenu.Size = new System.Drawing.Size(271, 45);
             this.BtnCategoriaTerrorMenu.TabIndex = 24;
             this.BtnCategoriaTerrorMenu.Text = "Terror";
@@ -328,8 +329,9 @@
             this.BtnCategoriaComediasMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaComediasMenu.Image")));
             this.BtnCategoriaComediasMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCategoriaComediasMenu.Location = new System.Drawing.Point(0, 135);
+            this.BtnCategoriaComediasMenu.Margin = new System.Windows.Forms.Padding(10, 3, 35, 3);
             this.BtnCategoriaComediasMenu.Name = "BtnCategoriaComediasMenu";
-            this.BtnCategoriaComediasMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriaComediasMenu.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnCategoriaComediasMenu.Size = new System.Drawing.Size(271, 45);
             this.BtnCategoriaComediasMenu.TabIndex = 23;
             this.BtnCategoriaComediasMenu.Text = "Comedias";
@@ -349,8 +351,9 @@
             this.BtnCategoriaAnimadasMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaAnimadasMenu.Image")));
             this.BtnCategoriaAnimadasMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCategoriaAnimadasMenu.Location = new System.Drawing.Point(0, 90);
+            this.BtnCategoriaAnimadasMenu.Margin = new System.Windows.Forms.Padding(10, 3, 35, 3);
             this.BtnCategoriaAnimadasMenu.Name = "BtnCategoriaAnimadasMenu";
-            this.BtnCategoriaAnimadasMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriaAnimadasMenu.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnCategoriaAnimadasMenu.Size = new System.Drawing.Size(271, 45);
             this.BtnCategoriaAnimadasMenu.TabIndex = 22;
             this.BtnCategoriaAnimadasMenu.Text = "Animadas";
@@ -370,8 +373,9 @@
             this.BtnCategoriaAccionMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaAccionMenu.Image")));
             this.BtnCategoriaAccionMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCategoriaAccionMenu.Location = new System.Drawing.Point(0, 45);
+            this.BtnCategoriaAccionMenu.Margin = new System.Windows.Forms.Padding(10, 3, 35, 3);
             this.BtnCategoriaAccionMenu.Name = "BtnCategoriaAccionMenu";
-            this.BtnCategoriaAccionMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriaAccionMenu.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnCategoriaAccionMenu.Size = new System.Drawing.Size(271, 45);
             this.BtnCategoriaAccionMenu.TabIndex = 21;
             this.BtnCategoriaAccionMenu.Text = "Acción";
@@ -391,8 +395,9 @@
             this.BtnCategoriaInicioMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnCategoriaInicioMenu.Image")));
             this.BtnCategoriaInicioMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCategoriaInicioMenu.Location = new System.Drawing.Point(0, 0);
+            this.BtnCategoriaInicioMenu.Margin = new System.Windows.Forms.Padding(10, 3, 35, 3);
             this.BtnCategoriaInicioMenu.Name = "BtnCategoriaInicioMenu";
-            this.BtnCategoriaInicioMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriaInicioMenu.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnCategoriaInicioMenu.Size = new System.Drawing.Size(271, 45);
             this.BtnCategoriaInicioMenu.TabIndex = 19;
             this.BtnCategoriaInicioMenu.Text = "Inicio";
@@ -413,7 +418,7 @@
             this.BtnCategoriasMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCategoriasMenu.Location = new System.Drawing.Point(0, 56);
             this.BtnCategoriasMenu.Name = "BtnCategoriasMenu";
-            this.BtnCategoriasMenu.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.BtnCategoriasMenu.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnCategoriasMenu.Size = new System.Drawing.Size(271, 44);
             this.BtnCategoriasMenu.TabIndex = 31;
             this.BtnCategoriasMenu.Text = "Categorias";
