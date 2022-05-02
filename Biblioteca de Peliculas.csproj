@@ -32,6 +32,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MACTrackBarLib, Version=1.0.5896.38740, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MACTrackBarLib.dll.1.0.2\lib\net40\MACTrackBarLib.dll</HintPath>
@@ -103,11 +108,11 @@
     <Compile Include="src\Menu\DlgMenu.Designer.cs">
       <DependentUpon>DlgMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgReproductor.cs">
+    <Compile Include="Reproductor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DlgReproductor.Designer.cs">
-      <DependentUpon>DlgReproductor.cs</DependentUpon>
+    <Compile Include="Reproductor.Designer.cs">
+      <DependentUpon>Reproductor.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Categorias\DlgCategoriaInicio.cs">
       <SubType>Form</SubType>
@@ -128,6 +133,12 @@
     </Compile>
     <Compile Include="src\Categoria\DlgCategoria.Designer.cs">
       <DependentUpon>DlgCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Reproductor\DlgReproductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Reproductor\DlgReproductor.Designer.cs">
+      <DependentUpon>DlgReproductor.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Utils\Utils.cs" />
     <EmbeddedResource Include="src\Menu\Menus\DlgAcercaDe.resx">
@@ -157,8 +168,8 @@
     <EmbeddedResource Include="src\Menu\DlgMenu.resx">
       <DependentUpon>DlgMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgReproductor.resx">
-      <DependentUpon>DlgReproductor.cs</DependentUpon>
+    <EmbeddedResource Include="Reproductor.resx">
+      <DependentUpon>Reproductor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Categorias\DlgTerror.resx">
       <DependentUpon>DlgTerror.cs</DependentUpon>
@@ -170,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\Categoria\DlgCategoria.resx">
       <DependentUpon>DlgCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Reproductor\DlgReproductor.resx">
+      <DependentUpon>DlgReproductor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -263,6 +277,27 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="src\resources\Dialog\minimize_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\resources\Dialog\maximize.png" />
+    <Content Include="src\resources\Reproductor\anterior %281%29.png" />
+    <Content Include="src\resources\Reproductor\anterior.png" />
+    <None Include="src\resources\Reproductor\audio.png" />
+    <Content Include="src\resources\Reproductor\avance-rapido.png" />
+    <Content Include="src\resources\Reproductor\camara-de-video.png" />
+    <Content Include="src\resources\Reproductor\detener.png" />
+    <None Include="src\resources\Reproductor\fast_forward.png" />
+    <Content Include="src\resources\Reproductor\mudo.png" />
+    <None Include="src\resources\Reproductor\next.png" />
+    <None Include="src\resources\Reproductor\no_audio.png" />
+    <Content Include="src\resources\Reproductor\pausa.png" />
+    <None Include="src\resources\Reproductor\pause.png" />
+    <None Include="src\resources\Reproductor\previous.png" />
+    <Content Include="src\resources\Reproductor\proximo.png" />
+    <None Include="src\resources\Reproductor\rewind.png" />
+    <None Include="src\resources\Reproductor\stop.png" />
+    <Content Include="src\resources\Reproductor\tocar.png" />
+    <Content Include="src\resources\Reproductor\volumen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

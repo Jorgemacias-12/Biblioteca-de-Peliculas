@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Biblioteca de Peliculas")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Biblioteca de Peliculas")]
-[assembly: AssemblyCopyright("Copyright © HP 2022")]
+[assembly: AssemblyCopyright("Aaron F & Jorge A")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

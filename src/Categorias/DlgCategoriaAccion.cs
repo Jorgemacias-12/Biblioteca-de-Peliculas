@@ -25,98 +25,98 @@ namespace Biblioteca_de_Peliculas
         private void PtbPeli1_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(1);
+            Reproductor dlgReproductor = new Reproductor(1);
             dlgReproductor.Show();
         }
 
         private void PtbPeli2_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(2);
+            Reproductor dlgReproductor = new Reproductor(2);
             dlgReproductor.Show();
         }
 
         private void PtbPeli3_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(3);
+            Reproductor dlgReproductor = new Reproductor(3);
             dlgReproductor.Show();
         }
 
         private void PtbPeli4_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(4);
+            Reproductor dlgReproductor = new Reproductor(4);
             dlgReproductor.Show();
         }
 
         private void PtbPeli7_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(7);
+            Reproductor dlgReproductor = new Reproductor(7);
             dlgReproductor.Show();
         }
 
         private void PtbPeli8_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(8);
+            Reproductor dlgReproductor = new Reproductor(8);
             dlgReproductor.Show();
         }
 
         private void PtbPeli9_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(9);
+            Reproductor dlgReproductor = new Reproductor(9);
             dlgReproductor.Show();
         }
 
         private void PtbPeli12_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(12);
+            Reproductor dlgReproductor = new Reproductor(12);
             dlgReproductor.Show();
         }
 
         private void PtbPeli13_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(13);
+            Reproductor dlgReproductor = new Reproductor(13);
             dlgReproductor.Show();
         }
 
         private void PtbPeli14_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(14);
+            Reproductor dlgReproductor = new Reproductor(14);
             dlgReproductor.Show();
         }
 
         private void PtbPeli15_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(15);
+            Reproductor dlgReproductor = new Reproductor(15);
             dlgReproductor.Show();
         }
 
         private void PtbPeli16_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(16);
+            Reproductor dlgReproductor = new Reproductor(16);
             dlgReproductor.Show();
         }
 
         private void PtbPeli17_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(17);
+            Reproductor dlgReproductor = new Reproductor(17);
             dlgReproductor.Show();
         }
 
         private void PtbPeli18_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(18);
+            Reproductor dlgReproductor = new Reproductor(18);
             dlgReproductor.Show();
         }
     }

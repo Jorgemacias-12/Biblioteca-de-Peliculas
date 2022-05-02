@@ -25,42 +25,42 @@ namespace Biblioteca_de_Peliculas
         private void PtbPeli2_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(2);
+            Reproductor dlgReproductor = new Reproductor(2);
             dlgReproductor.Show();
         }
 
         private void PtbPeli7_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(7);
+            Reproductor dlgReproductor = new Reproductor(7);
             dlgReproductor.Show();
         }
 
         private void PtbPeli10_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(10);
+            Reproductor dlgReproductor = new Reproductor(10);
             dlgReproductor.Show();
         }
 
         private void PtbPeli14_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(14);
+            Reproductor dlgReproductor = new Reproductor(14);
             dlgReproductor.Show();
         }
 
         private void PtbPeli15_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(15);
+            Reproductor dlgReproductor = new Reproductor(15);
             dlgReproductor.Show();
         }
 
         private void PtbPeli17_Click(object sender, EventArgs e)
         {
             this.Close();
-            DlgReproductor dlgReproductor = new DlgReproductor(17);
+            Reproductor dlgReproductor = new Reproductor(17);
             dlgReproductor.Show();
         }
     }
