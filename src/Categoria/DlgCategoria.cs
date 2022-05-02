@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Biblioteca_de_Peliculas.src.Reproductor;
 
 namespace Biblioteca_de_Peliculas.src.Categoria
 {
@@ -17,29 +18,28 @@ namespace Biblioteca_de_Peliculas.src.Categoria
 
         // Variables globales
         string category;
-        int movieQuantity = 500;
+        string actualTheme;
+        int movieQuantity = 20;
+        DlgReproductor reproductor;
 
         // Template para categorias
         public DlgCategoria(string categoryName, string theme)
         {
             InitializeComponent();
-            initTheme(theme);
+            InitTheme(theme);
             // Asignar la propiedad de la categoría de pelicula(s)
             category = categoryName;
+            actualTheme = theme;
         }
 
-        #region Mover Ventana Padre
-
-        #endregion
-
         // Inicializa, y carga datos hacía los componentes
-        public void initTheme(string theme)
+        public void InitTheme(string theme)
         {
             switch (theme) 
             {
                 case "light":
                     // Manipular color de fondo del componente
-                    FlpStatusBar.BackColor = Utils.GetColor("#FFFFFF");
+                    FlpStatusBar.BackColor = Utils.GetColor("#E0E0E0");
 
                     // Cambiar color de letra del título de la categoría
                     LblCategory.ForeColor = Utils.GetColor("#000");
@@ -51,7 +51,7 @@ namespace Biblioteca_de_Peliculas.src.Categoria
 
                 case "dark":
                     // Manipular color de fondo del componente
-                    FlpStatusBar.BackColor = Utils.GetColor("");
+                    FlpStatusBar.BackColor = Utils.GetColor("#353535");
 
                     // Cambiar color de letra del título de la categoría
                     LblCategory.ForeColor = Utils.GetColor("#FFF");
@@ -64,13 +64,13 @@ namespace Biblioteca_de_Peliculas.src.Categoria
         }
 
         // Actualiza el formulario con el tema seleccionado
-        public void updateTheme(string theme)
+        public void UpdateTheme(string theme)
         {
             switch (theme)
             {
                 case "light":
                     // Manipular color de fondo del componente
-                    FlpStatusBar.BackColor = Utils.GetColor("#FFFFFF");
+                    FlpStatusBar.BackColor = Utils.GetColor("#E0E0E0");
 
                     // Cambiar color de letra del título de la categoría
                     LblCategory.ForeColor = Utils.GetColor("#000");
@@ -82,7 +82,7 @@ namespace Biblioteca_de_Peliculas.src.Categoria
 
                 case "dark":
                     // Manipular color de fondo del componente
-                    FlpStatusBar.BackColor = Utils.GetColor("");
+                    FlpStatusBar.BackColor = Utils.GetColor("#353535");
 
                     // Cambiar color de letra del título de la categoría
                     LblCategory.ForeColor = Utils.GetColor("#FFF");
@@ -103,59 +103,47 @@ namespace Biblioteca_de_Peliculas.src.Categoria
 
         private void GoToMovie(object sender, EventArgs e)
         {
-
-            PictureBox movieViewRef = (PictureBox) sender;
-            int index = 0;
+            reproductor = new DlgReproductor(actualTheme);
+            PictureBox movieViewRef = (PictureBox)sender;
+            int Index = 0;
             string name = movieViewRef.Name;
 
             // Obtener nombre del componente, y reemplazar texto por nada
             // obteniendo así el número de componente, pero debemos restarle
             // uno, para obtener su índice.
-            index = Int32.Parse(Regex.Replace(name, @"(?!\d)([A-z]|\s)", "")) - 1;
+            Index = Int32.Parse(Regex.Replace(name, @"(?!\d)([A-z]|\s)", "")) - 1;
 
-            // Only for debug mode
-            MessageBox.Show($"Valor normal {index}");
+            reproductor.Show();
         }
 
         // Inicializar componentes, y cargar caratulas, si categoría esta vaciá carga placeholder
-        private async void DlgCategoria_Load(object sender, EventArgs e)
+        private void DlgCategoria_Load(object sender, EventArgs e)
         {
-            // Variables
-            Stopwatch time = new Stopwatch();
-            time.Start();
 
             // Cargar caratulas de películas dependiendo de la categoría
 
             switch(category)
             {
+                case "inicio":
+                    break;
+
+                case "accion":
+                    break;
+
+                case "animadas":
+                    break;
+
+                case "comedias":
+                    break;
+
+                case "terror":
+                    break;
+
+                default:
+                    Utils.GenerateMoviePreview(movieQuantity, FlpMoviesContainer, GoToMovie, true, category);
+                    break;
 
             }
-
-            if (category.Equals(""))
-            {
-
-                for (int i = 0; i < movieQuantity; i++)
-                {
-                    // Inicializar componente
-                    PictureBox view = new PictureBox();
-
-                    // Propidades de componente
-                    view.Size = new Size(150, 200);
-                    view.Name = $"view {i+1}";
-                    //view.Image = Utils.getDataFromRequest(i); // Obtener imagen
-                    view.Image = await Utils.GetImageFromUrl(i + 1);
-                    view.Margin = new Padding(10, 10, 10, 10);
-                    view.Anchor = AnchorStyles.None;
-                    view.Click += GoToMovie;
-                    view.Update();
-
-                    // Propiedades del contenedor
-                    FlpMoviesContainer.Controls.Add(view);
-                    FlpMoviesContainer.Update();
-                }
-            }
-            time.Stop();
-            MessageBox.Show($"Tiempo: {time.Elapsed.TotalSeconds}");
         }
     }
 }

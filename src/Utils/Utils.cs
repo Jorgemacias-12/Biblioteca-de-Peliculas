@@ -165,7 +165,7 @@ namespace Biblioteca_de_Peliculas.src
 
             pictureBox = null;
 
-            // Generar la caratula de imagenes 
+            // Iterar y generar la caratula de imagenes 
             for (int i = 0; i < QuantityOfView; i++)
             {
                 // Inicializar componentes

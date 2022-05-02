@@ -173,6 +173,7 @@
             this.BtnTimeIncrease.Size = new System.Drawing.Size(32, 51);
             this.BtnTimeIncrease.TabIndex = 20;
             this.BtnTimeIncrease.UseVisualStyleBackColor = true;
+            this.BtnTimeIncrease.Click += new System.EventHandler(this.BtnTimeIncrease_Click);
             // 
             // BtnNext
             // 

@@ -73,6 +73,15 @@ namespace Biblioteca_de_Peliculas.src.Reproductor
         private void BtnTimeIncrease_Click(object sender, EventArgs e)
         {
             if (Files == null) return;
+
+            int DecreasedTime;
+
+            DecreasedTime = MtbTimeLine.Value += 15;
+
+            if (DecreasedTime < 0)
+            {
+                MtbTimeLine.Value = 0;
+            }
         }
 
         private void BtnNext_Click(object sender, EventArgs e)
